@@ -458,6 +458,10 @@ form textarea {
   text-align: center;
 }
 
+.sub-body {
+  margin-bottom: 0px;
+}
+
 /*Footer Styling*/
 #footer {
   background-color: #333333;
@@ -524,7 +528,7 @@ form textarea {
 }
 
 .tags-1 {
-margin-top: 20px;
+  margin-top: 20px;
 }
 
 .tags-1,
