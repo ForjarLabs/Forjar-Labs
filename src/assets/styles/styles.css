@@ -57,7 +57,6 @@ a {
 body {
   /* width: 100%; */
   background: #0055ff;
-  background: red;
   color: #ffffff;
 }
 
@@ -68,10 +67,9 @@ body::-webkit-scrollbar {
 #header {
   padding: 20px 0;
   background: #0055ff;
-  background: pink;
   position: sticky;
   width: 100%;
-  
+
   top: 0;
   left: 0;
   z-index: 99;
@@ -177,7 +175,6 @@ nav {
   align-items: center;
   justify-content: center;
   height: 53.63vh;
-  background: orange;
 }
 
 .title {
@@ -314,12 +311,12 @@ nav {
 .note-1 {
   font-size: 22px;
   font-weight: 300;
-  width: 650px;
+  max-width: 650px;
   flex-basis: 40%;
 }
 
 .col {
-  width: 483px;
+  max-width: 483px;
   flex-basis: 30%;
 }
 
@@ -334,7 +331,7 @@ nav {
 }
 
 .line {
-  width: 1125px;
+  max-width: 1125px;
   height: 1.5px;
   background-color: #333333;
 }
@@ -352,7 +349,7 @@ nav {
 
 .intro p {
   font-weight: 500;
-  width: 950px;
+  max-width: 950px;
   font-size: 24px;
 }
 
@@ -374,13 +371,13 @@ nav {
 }
 
 .col-1 {
-  width: 683px;
+  max-width: 683px;
   flex-basis: 50%;
   margin-left: 30px;
 }
 
 .col-2 {
-  width: 683px;
+  max-width: 683px;
   flex-basis: 50%;
   margin-right: 30px;
 }
@@ -393,7 +390,7 @@ nav {
 .body {
   font-size: 28px;
   font-weight: 500;
-  width: 700px;
+  max-width: 700px;
 }
 
 /*Reachout Styling*/
@@ -897,13 +894,12 @@ form textarea {
   line-height: 1;
 }
 
-/* Responsiveness */  
+/* Responsiveness */
 
 /* Hide the link that should open and close the topnav on small screens */
 nav .icon {
   display: none;
 }
-
 
 /* When the screen is less than 600 pixels wide, hide all links, except for the first one ("Home"). Show the link that contains should open and close the topnav (.icon) */
 @media screen and (max-width: 1050px) {
@@ -931,10 +927,10 @@ nav .icon {
     width: 8vw;
   }
 
-  nav #navbar li a, nav .button {
+  nav #navbar li a,
+  nav .button {
     font-size: 3.5vw;
   }
-  
 }
 
 /* The "responsive" class is added to the topnav with JavaScript when the user clicks on the icon. This class makes the topnav look good on small screens (display the links vertically instead of horizontally) */
@@ -971,141 +967,185 @@ nav .icon {
 }
 
 @media screen and (max-width: 1050px) {
-  
   /* Landing Styling */
   #landing {
     text-align: center;
     height: 100%;
-    padding: 15vw 5vw;
+    padding: 10vw 5vw;
   }
-  
+
   .title {
     margin-top: 0;
     font-size: 18vw;
-    margin-bottom:10vw;
+    margin-bottom: 10vw;
     line-height: 100px;
   }
-  
-  
+
   .subtitle {
     margin-bottom: 10vw;
     font-size: 8vw;
   }
-  
+
   .description {
     font-size: 5vw;
     line-height: 1.5;
   }
-  
+
   .scrolldown {
     display: none;
   }
+}
+
+/* The who section */
+
+@media screen and (max-width: 1050px) {
+  #who {
+    margin-top: 0;
   }
 
-  /* The who section */
-  
-  @media screen and (max-width: 1050px) {
-    #who {
-      margin-top: 240px;
-      background-color: #f5f5f5;
-      width: 100%;
-    }
-    
-    .column {
-      display: flex;
-      flex-direction: column;
-      padding: 50px;
-      align-items: center;
-    }
-    
-    .image-container img {
-      /* max-width: 1125px; */
-      width: 100%;
-      height: auto;
-    }
-    
-    .note-1 {
-      font-size: 22px;
-      font-weight: 300;
-      width: 650px;
-      flex-basis: 40%;
-    }
-    
-    .col {
-      width: 483px;
-      flex-basis: 30%;
-    }
-    
-    .note-2 {
-      font-size: 30px;
-      font-weight: bold;
-    }
-    
-    .note-3 {
-      font-size: 14px;
-      font-weight: 300;
-    }
-    
-    .line {
-      width: 1125px;
-      height: 1.5px;
-      background-color: #333333;
-    }
-    
-    /* What We Do Styling */
-    .intro {
-      margin: 20px 0;
-      margin-bottom: 50px;
-      text-align: center;
-    }
-    
-    .intro h2 {
-      font-weight: 900;
-    }
-    
-    .intro p {
-      font-weight: 500;
-      width: 950px;
-      font-size: 24px;
-    }
-    
-    .what_img {
-      max-width: 400px;
-      height: auto;
-    }
-    
-    .row-1 {
-      display: flex;
-      flex-wrap: wrap;
-      margin-bottom: 100px;
-    }
-    
-    .row-2 {
-      display: flex;
-      flex-wrap: wrap;
-      margin-bottom: 30px;
-    }
-    
-    .col-1 {
-      width: 683px;
-      flex-basis: 50%;
-      margin-left: 30px;
-    }
-    
-    .col-2 {
-      width: 683px;
-      flex-basis: 50%;
-      margin-right: 30px;
-    }
-    
-    .header {
-      font-size: 36px;
-      font-weight: 700;
-    }
-    
-    .body {
-      font-size: 28px;
-      font-weight: 500;
-      width: 700px;
-    }
+  .row {
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
   }
+
+  .note-1 {
+    margin-top: 50px;
+    font-size: 5vw;
+    text-align: center;
+  }
+
+  .col {
+    text-align: center;
+  }
+
+  .note-2 {
+    font-size: 5vw;
+    font-weight: bold;
+  }
+
+  .note-3 {
+    font-size: 3.5vw;
+    font-weight: 300;
+  }
+
+  .line {
+    width: 1125px;
+    height: 1.5px;
+    background-color: #333333;
+  }
+
+  /* What We Do Styling */
+  .intro h2 {
+    font-size: 5vw;
+    font-weight: 900;
+  }
+
+  .intro p {
+    font-weight: 500;
+    font-size: 3.5vw;
+  }
+
+  .what_img {
+    width: 100%;
+    margin-bottom: 40px;
+  }
+
+  .row-1 {
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 60px;
+    text-align: center;
+  }
+
+  .row-2 {
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 30px;
+  }
+
+  .col-1 {
+    flex-basis: 50%;
+    margin-left: 30px;
+  }
+
+  .col-2 {
+    flex-basis: 50%;
+    margin-right: 30px;
+  }
+
+  .header {
+    font-size: 5vw;
+    font-weight: 700;
+  }
+
+  .body {
+    text-align: center;
+    font-size: 3.5vw;
+    font-weight: 500;
+  }
+
+  .line {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 1050px) {
+  #reachout {
+    display: none;
+  }
+
+  /*Footer Styling*/
+
+  .com-img {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+
+  .company p {
+    font-size: 3.5vw;
+    text-align: center;
+  }
+
+  .company span {
+    font-size: 4vw;
+  }
+
+  .contact h4,
+  .services h4 {
+    font-size: 4.5vw;
+    text-align: center;
+    margin-top: 20px;
+  }
+
+  .contact p,
+  .services p {
+    font-size: 3vw;
+    text-align: center;
+  }
+
+  .copyright {
+    width: 100%;
+    padding: 0;
+  }
+
+  .row-3 {
+    padding: 20px 0;
+    width: 100%;
+    justify-content: space-around;
+  }
+
+  .tags-1 {
+    margin-top: 20px;
+  }
+
+  .tags-1,
+  .tags-2 {
+    font-size: 2.5vw;
+  }
+
+  .social-icons a {
+    font-size: 4vw;
+    margin-right: 3vw;
+  }
+}
