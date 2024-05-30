@@ -15,3 +15,13 @@
     line-height: 1;
   }
   
+  @media screen and (max-width: 1050px) {
+
+    #portfolio {
+      padding: 20px;
+    }
+    
+    .portfolio_intro h2 {
+      font-size: 11vw;
+    }
+  }

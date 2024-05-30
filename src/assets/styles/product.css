@@ -20,3 +20,23 @@
     font-size: 35px;
     margin-bottom: 8.98vh;
   }
+
+  @media screen and (max-width: 1050px) {
+
+    #introduction {
+      padding: 20px;
+    }
+    
+    #introduction h1 {
+      font-size: 15vw;
+      text-align: center;
+      margin-top: 2vh;
+      margin-bottom: 10vh;
+      line-height: 1;
+    }
+    
+    #introduction h4 {
+      font-size: 8vw;
+      line-height: 1.5;
+    }
+  }

@@ -73,3 +73,60 @@ form textarea {
 .sub-body {
   margin-bottom: 0px;
 }
+
+@media screen and (max-width: 1050px) {
+  /*Reachout Styling*/
+  #reachout {
+    padding: 20px;
+  }
+
+  .contact-left {
+    flex-basis: 100%;
+    align-items: center;
+    text-align: center;
+    margin-bottom: 30px;
+    width: 100%;
+  }
+
+  .contact-left h2 {
+    font-size: 12vw;
+    line-height: 1;
+  }
+
+  .contact-left p {
+    font-size: 6vw;
+    line-height: 1.5;
+  }
+
+  .contact-right {
+    flex-basis: 100%;
+    width: 100%;
+  }
+
+  form input[type="text"]::placeholder,
+  form input[type="email"]::placeholder,
+  form textarea::placeholder {
+    font-size: 5vw;
+  }
+
+  form input[type="text"],
+  form input[type="email"] {
+    width: 100%;
+    font-size: 5vw;
+  }
+
+  form textarea {
+    width: 100%;
+    font-size: 5vw;
+  }
+
+  .btn {
+    font-size: 5vw;
+    margin-bottom: 20px;
+    width: 100%;
+  }
+
+  .sub-body {
+    margin-bottom: 0px;
+  }
+}
