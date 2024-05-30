@@ -1091,8 +1091,26 @@ nav .icon {
 }
 
 @media screen and (max-width: 1050px) {
-  #reachout {
+  #contact_us {
+    text-align: center;
+    height: 100%;
+    padding: 10vw 5vw;
+  }
+
+  .cs_img{
     display: none;
+  }
+
+  .contact_us-left p {
+    text-align: center;
+    font-size: 3.5vw;
+    font-weight: 500;
+    width: 100%;
+  }
+
+  .btn_2{
+    width: 40%;
+    font-size: 15px;
   }
 
   /*Footer Styling*/
