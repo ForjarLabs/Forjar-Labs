@@ -1,0 +1,22 @@
+/* About Styling */
+#introduction {
+    padding: 80px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  #introduction h1 {
+    font-size: 80px;
+    margin-top: 8.98vh;
+    margin-bottom: 11.98vh;
+  }
+  
+  #introduction h4 {
+    width: 100%;
+    text-align: center;
+    color: #fff;
+    font-size: 35px;
+    margin-bottom: 8.98vh;
+  }
