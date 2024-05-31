@@ -283,7 +283,7 @@
     }
   
     .note-3 {
-      font-size: 3.5vw;
+      font-size: 4vw;
       font-weight: 300;
     }
   
@@ -298,10 +298,14 @@
       font-size: 5vw;
       font-weight: 900;
     }
+
+    .column {
+      padding: 30px;
+    }
   
     .intro p {
       font-weight: 500;
-      font-size: 3.5vw;
+      font-size: 4vw;
     }
   
     .what_img {
@@ -324,28 +328,34 @@
   
     .col-1 {
       flex-basis: 50%;
-      margin-left: 30px;
+      margin-left: 0;
     }
   
     .col-2 {
       flex-basis: 50%;
-      margin-right: 30px;
+      margin-right: 0;
     }
   
     .header {
       font-size: 5vw;
       font-weight: 700;
+      text-align: center;
     }
   
     .body {
       text-align: center;
-      font-size: 3.5vw;
+      font-size: 4.0vw;
       font-weight: 500;
     }
   
     .line {
       width: 100%;
     }
+
+    .reverse-order {
+      flex-flow: column-reverse;
+    }
+
   }
   
   

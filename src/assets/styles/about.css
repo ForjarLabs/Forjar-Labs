@@ -108,16 +108,16 @@
   }
 
   #introduction h1 {
-    font-size: 15vw;
+    font-size: 12vw;
     margin-top:0;
     margin-bottom: 5vh;
-    line-height: 1;
+    line-height: 1.5;
   }
 
   #introduction h4 {
     line-height: 1.5;
     color: #fff;
-    font-size: 8vw;
+    font-size: 6vw;
     margin-bottom: 2vh;
   }
 

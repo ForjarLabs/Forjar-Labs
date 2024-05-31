@@ -28,15 +28,15 @@
     }
     
     #introduction h1 {
-      font-size: 15vw;
+      font-size: 12vw;
       text-align: center;
-      margin-top: 2vh;
-      margin-bottom: 10vh;
-      line-height: 1;
+      margin-top: 0;
+      margin-bottom: 5vh;
+      line-height: 1.2;
     }
     
     #introduction h4 {
-      font-size: 8vw;
+      font-size: 6vw;
       line-height: 1.5;
     }
   }

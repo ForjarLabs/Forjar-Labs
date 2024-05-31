@@ -221,4 +221,8 @@
     font-size: 6vw;
     margin-bottom: 30px;
   }
+
+  .reverse-order {
+    flex-flow: column-reverse;
+  }
 }
