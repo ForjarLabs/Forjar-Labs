@@ -61,6 +61,7 @@
   background-color: #333333;
   opacity: 0.7;
   margin-bottom: 10px;
+  height: 2px;
 }
 
 .approach_sub_header {
@@ -161,6 +162,7 @@
   /* Commitment Syling */
   .commitment h4 {
     font-size: 8vw;
+    margin-bottom: 50px;
   }
 
   .c_row {

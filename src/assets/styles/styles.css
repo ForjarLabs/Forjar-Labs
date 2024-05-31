@@ -166,16 +166,15 @@ nav {
   align-items: center;
 }
 
-#close {
+/* Hide the link that should close the topnav on small screens */
+nav .close-button {
   display: none;
 }
 
-/* Hide the link that should open and close the topnav on small screens */
+/* Hide the link that should open the topnav on small screens */
 nav .icon {
   display: none;
 }
-
-
 
 /*Contact Us Styling*/
 #contact_us {
@@ -213,8 +212,6 @@ nav .icon {
   margin-top: 10px;
   text-align: center;
 }
-
-
 
 /*Footer Styling*/
 #footer {
@@ -306,10 +303,12 @@ nav .icon {
   nav #navbar {
     display: none;
   }
-  #nav a.icon {
+  nav a.icon {
     float: right;
     display: block;
   }
+
+
   nav {
     justify-content: space-between;
     padding-left: 40px;
@@ -337,12 +336,7 @@ nav .icon {
     flex-direction: column;
     align-items: center;
   }
-  nav.responsive a.icon {
-    position: absolute;
-    right: 0;
-    padding-right: 40px;
-    /* top: 15px; */
-  }
+
   nav.responsive .top {
     position: absolute;
     left: 0;
@@ -361,6 +355,23 @@ nav .icon {
     margin: 0;
     margin-bottom: 10px;
   }
+
+  nav.responsive a.icon {
+    display: none;
+    position: absolute;
+    right: 0;
+    padding-right: 40px;
+    /* top: 15px; */
+  }
+
+  nav.responsive .close-button {
+    position: absolute;
+    right: 0;
+    padding-right: 40px;
+    font-size: 8vw;
+    float: right;
+    display: block;
+  }
 }
 
 @media screen and (max-width: 1050px) {
@@ -370,7 +381,7 @@ nav .icon {
     padding: 10vw 5vw;
   }
 
-  .cs_img{
+  .cs_img {
     display: none;
   }
 
@@ -381,11 +392,12 @@ nav .icon {
     width: 100%;
   }
 
-  .btn_2{
-    width: 40%;
-    font-size: 15px;
+  .btn_2 {
+    width: 100%;
+    font-size: 5vw;
+    align-items: center;
+    padding: 1.5vh 2vw;
   }
-  
 
   /*Footer Styling*/
 
@@ -446,4 +458,3 @@ nav .icon {
     margin-right: 3vw;
   }
 }
-

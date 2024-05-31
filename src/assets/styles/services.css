@@ -158,9 +158,10 @@
 
   .points {
     list-style-type: circle;
-    margin-left: 20px;
+    /* margin-left: 20px; */
+    text-align: left;
     margin-top: 45px;
-    margin-bottom: 30px;
+    margin-bottom: 10px;
   }
 
   .points li {
@@ -186,7 +187,7 @@
   .row-1 {
     flex-direction: column;
     align-items: center;
-    margin-bottom: 60px;
+    margin-bottom: 20px;
     text-align: center;
   }
 
