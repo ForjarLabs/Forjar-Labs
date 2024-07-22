@@ -89,7 +89,7 @@
     />
     <meta name="theme-color" content="#ffffff" />
     <link rel="stylesheet" href="assets/styles/styles.css" />
-    <link rel="stylesheet" href="assets/styles/product.css" />
+    <link rel="stylesheet" href="assets/styles/contact.css" />
     <script
       src="https://kit.fontawesome.com/859f856037.js"
       crossorigin="anonymous"
@@ -99,7 +99,7 @@
     <!--Header-->
     <section id="header">
       <nav class="nav" id="nav">
-        <a class="top" href="../index.html">
+        <a class="top" href="/">
           <img
             src="assets/images/forjar_logo.png"
             alt="Forjar Labs Logo"
@@ -107,13 +107,13 @@
           />
         </a>
         <ul id="navbar">
-          <li><a href="portfolio.html">Portfolio</a></li>
-          <li><a href="product.html">Products</a></li>
-          <li><a href="services.html">Services</a></li>
-          <li><a href="about.html">About Us</a></li>
-          <li><a href="careers.html">Careers</a></li>
+          <li><a href="/portfolio">Portfolio</a></li>
+          <li><a href="/product">Products</a></li>
+          <li><a href="/services">Services</a></li>
+          <li><a href="/about">About Us</a></li>
+          <li><a href="/careers">Careers</a></li>
         </ul>
-        <a href="contact.html" class="button">Contact Us</a>
+        <a href="/contact" class="button">Contact Us</a>
         <div id="mobile">
           <i class="fas fa-bars-staggered" id="bar"></i>
         </div>
@@ -125,72 +125,48 @@
         </a>
       </nav>
     </section>
-    <!--Landing-->
-    <section id="introduction">
-      <h1>Experience Boundless Creativity</h1>
-      <h4>
-        At Forjar Labs, we are dedicated to crafting pre-packaged software
-        products that redefine efficiency and effectiveness. Our products
-        reflect a fusion of advanced technology and user-friendly design,
-        empowering you to excel in today's rapidly evolving digital landscape
-      </h4>
-    </section>
-    <!--Footer-->
-    <section id="footer">
-      <div class="info">
+    <!--Reachout-->
+    <section id="reachout">
+      <div class="container">
         <div class="row">
-          <div class="company">
-            <img
-              class="com-img"
-              src="assets/images/forjarlabs-logo 1.png"
-              alt="Forjar Logo"
-            />
+          <div class="contact-left">
+            <h2 class="sub-title">Let’s work together</h2>
             <p>
-              Crafting Transformative Experiences <br />
-              <span>Let’s work together</span>
+              We're eager to learn more about you and your needs. Please fill
+              out the form with your details, and our team will be in touch
+              shortly. <br />If you’d prefer email, reach out to
+              hello@forjarlabs.agency
             </p>
           </div>
-          <div class="services">
-            <h4>WHAT WE DO</h4>
-            <p>Web Design & Development</p>
-            <p>Mobile App Design & Development</p>
-            <p>Digital Marketing</p>
-            <p>Web 3 Development</p>
+          <div class="contact-right">
+            <form
+              id="consultationForm"
+              method="post"
+              action="includes/reachout.php"
+            >
+              <input type="text" name="Name" placeholder="Name" required />
+              <input
+                type="text"
+                name="Business"
+                placeholder="Business"
+                required
+              />
+              <input type="email" name="Email" placeholder="Email" required />
+              <input
+                type="text"
+                name="PhoneNumber"
+                placeholder="Phone Number"
+                required
+              />
+              <textarea
+                name="Message"
+                rows="7"
+                placeholder="Your Message"
+                required
+              ></textarea>
+              <input type="submit" class="btn" value="Schedule a Meeting Now" />
+            </form>
           </div>
-          <div class="contact">
-            <h4>CONTACT US</h4>
-            <p>hello@forjarlabs.agency</p>
-            <div class="social-icons">
-              <a href="https://dribbble.com/ForjarLabs" target="_blank"
-                ><i class="fa-brands fa-dribbble"></i
-              ></a>
-              <a
-                href="https://www.facebook.com/profile.php?id=61551746683072&mibextid=kFxxJD"
-                target="_blank"
-                ><i class="fa-brands fa-facebook"></i
-              ></a>
-              <a
-                href="https://www.linkedin.com/company/forjar-labs/about"
-                target="_blank"
-                ><i class="fa-brands fa-linkedin-in"></i
-              ></a>
-              <a href="https://www.instagram.com/forjarlabs/" target="_blank"
-                ><i class="fa-brands fa-instagram"></i
-              ></a>
-              <a href="https://twitter.com/forjarlabs" target="_blank"
-                ><i class="fa-brands fa-x-twitter"></i
-              ></a>
-            </div>
-          </div>
-        </div>
-      </div>
-      <!--Copyright-->
-      <div class="copyright">
-        <div class="row-3">
-          <p class="tags-1">&copy; 2024 Forjar Labs. All rights reserved</p>
-          <a href="#" class="tags-2">Privacy Policy</a>
-          <a href="#" class="tags-2">Terms</a>
-          <a href="#" class="tags-2">Sitemap</a>
         </div>
       </div>
     </section>
