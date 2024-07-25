@@ -1,0 +1,17 @@
+{
+    "jobs": [ 
+        {
+            "img_name": "mernor.png",
+            "title": "Mernor",
+            "description": "Learn how we transformed Mernor’s brand identity and online presence, boosting sales and engagement for this leading fashion retailer."
+        },
+
+        {
+            "img_name": "oasis.png",
+            "title": "Oasis",
+            "description": "Learn how we revamped the digital experience for Oasis, enhancing customer engagement and online ordering."
+        }
+    ]
+      
+}
+  
