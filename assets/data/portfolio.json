@@ -1,0 +1,42 @@
+{
+    "jobs": [ 
+        {
+            "img_name": "mernor.png",
+            "title": "Mernor",
+            "description": "Learn how we transformed Mernor’s brand identity and online presence, boosting sales and engagement for this leading fashion retailer."
+        },
+
+        {
+            "img_name": "oasis.png",
+            "title": "Oasis",
+            "description": "Learn how we revamped the digital experience for Oasis, enhancing customer engagement and online ordering."
+        },
+
+        {
+            "img_name": "tatafo.png",
+            "title": "Tatafo",
+            "description": "Learn how we launched an innovative news app for tatafo, driving user engagement and becoming a top news source in Nigeria."
+        },
+
+        {
+            "img_name": "rgz.png",
+            "title": "Renewed GenZ",
+            "description": "Explore our digital campaign for Renewed GenZ, which significantly increased awareness, donations, and volunteer support for teenages."
+        },
+
+        {
+            "img_name": "zamani.png",
+            "title": "Zamani Travels",
+            "description": "Learn our how we developed a comprehensive digital strategy for Zamani Travels, boosting bookings and attracting international clients for this Nigerian travel agency."
+        },
+
+        {
+            "img_name": "flux.png",
+            "title": "Flux",
+            "description": "Discover how we developed Flux Wallet, a secure and user-friendly crypto wallet app, enhancing user trust and driving adoption into the Nigerian market."
+        }
+
+    ]
+      
+}
+  
