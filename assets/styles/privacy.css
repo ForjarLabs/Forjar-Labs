@@ -1,0 +1,58 @@
+/*Privacy Policy Styling*/
+#privy {
+  background-color: #f5f5f5;
+  padding: 50px;
+  display: flex;
+  flex-direction: column;
+  align-items: self-start;
+  justify-content: center;
+}
+
+.privy_sec {
+  margin-bottom: 50px;
+}
+
+.privy_sec h2 {
+  font-size: 66px;
+  max-width: 750px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  line-height: 1;
+}
+
+.privy_sec h3 {
+  font-size: 46px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  line-height: 1;
+  color: #333333;
+}
+
+.privy_sec p {
+  font-size: 35px;
+  font-weight: 900;
+  opacity: 0.7;
+}
+
+.privy_sec h4 {
+  font-size: 39px;
+  font-weight: 500;
+  max-width: 1250px;
+  margin-bottom: 30px;
+}
+
+.privy_sec ol {
+  list-style-type: none;
+}
+
+.privy_sec ol li {
+  margin-bottom: 0.5em;
+  font-size: 39px;
+  font-weight: 500;
+  color: #333333;
+}
+
+.privy_sec ol li span {
+  font-weight: 900;
+  margin-right: 0.3em;
+}
