@@ -456,4 +456,9 @@ nav .icon {
     font-size: 4vw;
     margin-right: 3vw;
   }
+
+  .subscript {
+    display: flex;
+    flex-direction: column;
+  }
 }
