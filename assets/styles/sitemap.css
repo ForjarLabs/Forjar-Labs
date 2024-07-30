@@ -22,3 +22,23 @@
   .sitemap ul li a:hover {
     text-decoration: underline;
   }
+
+  @media screen and (max-width: 1050px) {
+  
+    .sitemap {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 20px;
+    }
+    .sitemap h1 {
+      font-size: 25vw;
+      line-height: 1;
+    }
+    .sitemap ul {
+      list-style-type: none;
+      padding: 0;
+      text-align: center;
+      font-size: 5vw;
+    }
+
+  }
