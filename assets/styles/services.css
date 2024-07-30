@@ -114,7 +114,6 @@
   margin-bottom: 100px;
 }
 
-
 @media screen and (max-width: 1050px) {
   #ally {
     padding: 30px;
@@ -198,7 +197,7 @@
 
   .cat_img_1 {
     margin: 20px 0;
-    width: 100%;;
+    width: 100%;
   }
 
   .header_1,
@@ -207,7 +206,7 @@
   }
 
   .header_1 {
-    font-size: 8vw ;
+    font-size: 8vw;
     font-weight: 700;
   }
 

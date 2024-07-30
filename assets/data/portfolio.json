@@ -1,42 +1,76 @@
 {
-    "jobs": [ 
-        {
-            "img_name": "mernor.png",
-            "title": "Mernor",
-            "description": "Learn how we transformed Mernor’s brand identity and online presence, boosting sales and engagement for this leading fashion retailer."
-        },
+  "jobs": [
+    {
+      "img_name": "mernor.png",
+      "title": "Mernor",
+      "description": "Learn how we transformed Mernor’s brand identity and online presence, boosting sales and engagement for this leading fashion retailer.",
 
-        {
-            "img_name": "oasis.png",
-            "title": "Oasis",
-            "description": "Learn how we revamped the digital experience for Oasis, enhancing customer engagement and online ordering."
-        },
+      "hero_description": "Mernor, a leading fashion retailer, approached our digital agency with the goal of revitalizing their brand identity and strengthening their online presence. The fashion industry is highly competitive, and Mernor needed to stand out with a unique, appealing, and consistent brand image across all digital platforms.",
+      "role": [
+        "Developed a refreshed brand identity",
+        "Redesigned the website to be user-centric, responsive, and visually appealing",
+        "Redesigned the website to be user-centric, responsive, and visually appealing",
+        "Implemented analytics tools to optimize performance"
+      ],
+      "results": [
+        "40% growth in social media following",
+        "50% reduction in cart abandonment within three months",
+        "35% boost in online sales",
+        "Consistent brand presence across all digital platforms"
+      ],
+      "hero_image": "mermor-hero.png",
+      "challenge": "Mernor faced significant challenges, including an outdated brand identity that failed to connect with their target audience and a website lacking optimization for user experience and e-commerce. Their online channels suffered from low engagement and sales, compounded by inconsistent brand messaging across social media platforms.",
+     
+      "approach": "To tackle Mernor's challenges and transform their brand, we employed a multifaceted and strategic approach. Our goal was to not only revitalize Mernor’s brand identity but also to enhance their online presence and drive significant growth. Here’s a closer look at how we achieved this transformation",
+      "approach1_title": "Comprehensive Brand Audit",
+      "approach1_body": " We embarked on a thorough analysis of Mernor’s existing brand elements, online presence, and competitor landscape. By delving into customer feedback and conducting extensive market research, we gained critical insights into Mernor's target audience, their preferences, and pain points. This foundation allowed us to craft a strategy that was both informed and targeted.",
+      "approach1_image": "audit.png",
+      "approach2_title": "Brand Identity Overhaul",
+      "approach2_body": "In the role of Branding Specialist, we breathed new life into Mernor’s brand identity. This involved designing a new logo, curating a modern color palette, selecting complementary typography, and defining a cohesive visual style. Each element was carefully chosen to embody Mernor’s core values and appeal to their target market, ensuring a fresh yet consistent brand image.",
+      "approach2_image1": "mernor-logo.png",
+      "approach2_image2": "mernor-design.png",
+      "approach3_title": "Website Redesign and Development",
+      "approach3_body": "As UX/UI Designers and Web Developers, we reimagined Mernor’s digital storefront. Our focus was on creating a user-centric, responsive, and visually captivating website. We improved site navigation, optimized product pages, and streamlined the checkout process to enhance user experience and drive sales. Advanced e-commerce functionalities were integrated to provide a seamless and enjoyable shopping experience for customers.",
+      "approach3_image1": "mernor-insta1.png",
+      "approach3_image2": "mernor-insta2.png",
+      "approach3_image3": "mernor-insta3.png",
+      "approach4_title": "Digital Marketing and Social Media Strategy",
+      "approach4_body": "In our roles as Digital Marketer and Social Media Manager, we developed a robust digital marketing plan. This plan included SEO optimization, PPC campaigns, and targeted email marketing. We crafted a consistent and engaging content strategy for social media platforms, designed to increase brand awareness, foster customer interaction, and build a loyal online community.",
+      "approach5_title": "Performance Tracking and Optimization",
+      "approach5_body": "Acting as Data Analysts, we implemented sophisticated analytics tools to monitor key metrics such as website traffic, user behavior, and sales performance. Through regular data analysis, we were able to refine our strategies in real-time, ensuring continuous improvement and optimal results.",
 
-        {
-            "img_name": "tatafo.png",
-            "title": "Tatafo",
-            "description": "Learn how we launched an innovative news app for tatafo, driving user engagement and becoming a top news source in Nigeria."
-        },
+      "closing": "Our comprehensive approach to transforming Mernor’s brand identity and online presence resulted in significant improvements in sales, engagement, and overall brand perception. By leveraging our expertise in branding, web development, and digital marketing, we helped Mernor reclaim their position as a leading fashion retailer in the digital space.",
+      "review": "\"The team at Forjar Labs did an outstanding job revitalizing our brand. The new website is not only beautiful but also incredibly functional. Our sales have skyrocketed, and our customers love the new look!\" - Mernor’s CEO"
+    },
 
-        {
-            "img_name": "rgz.png",
-            "title": "Renewed GenZ",
-            "description": "Explore our digital campaign for Renewed GenZ, which significantly increased awareness, donations, and volunteer support for teenages."
-        },
+    {
+      "img_name": "oasis.png",
+      "title": "Oasis",
+      "description": "Learn how we revamped the digital experience for Oasis, enhancing customer engagement and online ordering."
+    },
 
-        {
-            "img_name": "zamani.png",
-            "title": "Zamani Travels",
-            "description": "Learn our how we developed a comprehensive digital strategy for Zamani Travels, boosting bookings and attracting international clients for this Nigerian travel agency."
-        },
+    {
+      "img_name": "tatafo.png",
+      "title": "Tatafo",
+      "description": "Learn how we launched an innovative news app for tatafo, driving user engagement and becoming a top news source in Nigeria."
+    },
 
-        {
-            "img_name": "flux.png",
-            "title": "Flux",
-            "description": "Discover how we developed Flux Wallet, a secure and user-friendly crypto wallet app, enhancing user trust and driving adoption into the Nigerian market."
-        }
+    {
+      "img_name": "rgz.png",
+      "title": "Renewed Gen Z",
+      "description": "Explore our digital campaign for Renewed GenZ, which significantly increased awareness, donations, and volunteer support for teenages."
+    },
 
-    ]
-      
+    {
+      "img_name": "zamani.png",
+      "title": "Zamani Travels",
+      "description": "Learn our how we developed a comprehensive digital strategy for Zamani Travels, boosting bookings and attracting international clients for this Nigerian travel agency."
+    },
+
+    {
+      "img_name": "flux.png",
+      "title": "Flux",
+      "description": "Discover how we developed Flux Wallet, a secure and user-friendly crypto wallet app, enhancing user trust and driving adoption into the Nigerian market."
+    }
+  ]
 }
-  

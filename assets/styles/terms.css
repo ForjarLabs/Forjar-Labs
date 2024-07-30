@@ -1,0 +1,81 @@
+/*Terms & Conditions Styling*/
+#terms {
+  background-color: #f5f5f5;
+  padding: 50px;
+  display: flex;
+  flex-direction: column;
+  align-items: self-start;
+  justify-content: center;
+}
+
+.terms_sec {
+  margin-bottom: 50px;
+}
+
+.terms_sec h2 {
+  font-size: 66px;
+  max-width: 750px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  line-height: 1;
+}
+
+.terms_sec h3 {
+  font-size: 46px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  line-height: 1;
+  color: #333333;
+}
+
+.terms_sec p {
+  font-size: 35px;
+  font-weight: 900;
+  opacity: 0.7;
+}
+
+.terms_sec h4 {
+  font-size: 39px;
+  font-weight: 500;
+  max-width: 1250px;
+  margin-bottom: 30px;
+}
+
+.terms_sec ol {
+  list-style-type: none;
+}
+
+.terms_sec ol li {
+  margin-bottom: 0.5em;
+  font-size: 39px;
+  font-weight: 900;
+  color: #333333;
+}
+
+@media screen and (max-width: 1050px) {
+ 
+  #terms {
+    padding: 20px;
+  }
+  
+  .terms_sec h2 {
+    font-size: 10vw;
+  }
+  
+  .terms_sec h3 {
+    font-size: 8vw;
+  }
+  
+  .terms_sec p {
+    font-size: 5vw;
+  }
+  
+  .terms_sec h4 {
+    font-size: 5vw;
+  }
+  
+  .terms_sec ol li {
+    font-size: 5vw;
+  }
+
+}

@@ -10,7 +10,7 @@ document.addEventListener('DOMContentLoaded', function () {
       <div class="portfolio_body_item_desc">
         <h2>${value.title}</h2>
         <h4>${value.description}</h4>
-        <a href="/portfolio/job?id=${i}"><p>Read Case Study</p></a>
+        <a href="/portfolio/job/?id=${i}"><p>Read Case Study</p></a>
       </div>
   </div>`;
   })

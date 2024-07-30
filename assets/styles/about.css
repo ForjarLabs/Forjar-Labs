@@ -109,7 +109,7 @@
 
   #introduction h1 {
     font-size: 12vw;
-    margin-top:0;
+    margin-top: 0;
     margin-bottom: 5vh;
     line-height: 1.5;
   }
@@ -149,14 +149,13 @@
     padding-bottom: 30px;
   }
 
-
   .approach_sub_header {
     font-size: 5vw;
     margin-bottom: 3vh;
   }
 
   .approach_sub_body {
-   font-size: 5vw;
+    font-size: 5vw;
   }
 
   /* Commitment Syling */

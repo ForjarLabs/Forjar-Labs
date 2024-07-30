@@ -308,7 +308,6 @@ nav .icon {
     display: block;
   }
 
-
   nav {
     justify-content: space-between;
     padding-left: 40px;
@@ -456,5 +455,10 @@ nav .icon {
   .social-icons a {
     font-size: 4vw;
     margin-right: 3vw;
+  }
+
+  .subscript {
+    display: flex;
+    flex-direction: column;
   }
 }
