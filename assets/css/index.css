@@ -284,4 +284,8 @@ h1 {
   .stat-column {
     flex: 0;
 }
+
+#services p{
+  width: 100%;
+}
 }
