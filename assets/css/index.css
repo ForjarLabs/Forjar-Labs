@@ -1,0 +1,287 @@
+/* Global Section Defaults */
+section:not(#header):not(#footer):not(#statistics) {
+  padding: 2rem 3.25rem;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+h1,
+h3,
+h4 {
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+
+#hero p {
+  width: 50%;
+}
+
+p {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #555;
+}
+
+button {
+  background-color: var(--color-button-bg, #f5c518);
+  color: #000;
+  border: none;
+  padding: 0.75rem 1.5rem;
+  font-size: 1rem;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: background-color 0.3s ease;
+  width: max-content;
+}
+
+button:hover {
+  background-color: var(--color-button-hover, #e6b914);
+}
+
+.section-heading {
+  color: #8c8f92;
+}
+
+/* Hero Section */
+#hero {
+  /* text-align: center; */
+  padding-top: 6rem;
+}
+
+h1 {
+  font-size: 2.25rem;
+  margin-bottom: 1rem;
+}
+
+#hero .explore {
+  display: flex;
+  gap: 1rem;
+  margin-top: 2rem;
+}
+
+#hero .explore a {
+  color: #000;
+  font-weight: 600;
+  text-decoration: underline;
+}
+
+#hero .tilt-45degree {
+  display: inline-block;
+  transform: rotate(45deg);
+  margin-right: 0.25rem;
+}
+
+.hero-images-row {
+  display: flex;
+  gap: 1rem;
+  margin-top: 2rem;
+  justify-content: center;
+  overflow-x: hidden;
+}
+
+.hero-images-row img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+
+/* Statistics */
+#statistics {
+  background-color: var(--color-primary-bg);
+  color: #f8f9fa;
+  padding: 2rem 3.25rem;
+}
+
+#statistics h4 {
+  margin: 0;
+}
+
+.stats-row {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.stat-column {
+  flex: 1 1 150px;
+}
+
+.stat-column h1 {
+  font-size: 2rem;
+  margin: 0;
+}
+
+.stat-column p {
+  color: #f8f9fa;
+}
+
+.superscript {
+  font-size: 1rem;
+  vertical-align: super;
+}
+
+/* Products */
+#products .products-top {
+  display: flex;
+  gap: 2rem;
+}
+
+#products .product-bottom {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1rem;
+  margin-top: 2rem;
+  padding: 0 2rem;
+}
+
+#products .product-bottom img {
+  width: 100%;
+  border-radius: 8px;
+}
+
+/* Services */
+#services p {
+  width: 80%;
+  margin-bottom: 2rem;
+}
+
+.services-list-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  margin-top: 5rem;
+  margin-bottom: 5rem;
+}
+
+.service-category-column {
+  flex: 1;
+  min-width: 200px;
+}
+
+.service-category-column li {
+  margin-bottom: 1rem;
+}
+
+.service-category-header {
+  color: #d0d1d3;
+  margin-bottom: 1rem;
+}
+
+/* About Section */
+#about {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  text-align: center;
+}
+
+#about p {
+  margin-bottom: 2rem;
+}
+
+#about .about-left,
+#contact .contact-right {
+  max-width: 600px;
+}
+
+#about img {
+  max-width: 100%;
+  border-radius: 8px;
+}
+
+/* Contact */
+#contact {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  align-items: center;
+}
+
+#contact form {
+  width: 100%;
+  max-width: 600px;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+#contact .form-row {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+@media (min-width: 768px) {
+  #contact .form-row {
+    flex-direction: row;
+    gap: 1rem;
+  }
+
+  #contact input {
+    flex: 1;
+  }
+}
+
+#contact textarea {
+  width: 100%;
+  height: 150px;
+  padding: 0.75rem;
+  font-size: 1rem;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+}
+
+.contact-button {
+  align-self: flex-start;
+}
+
+@media (min-width: 768px) {
+  #about,
+  #contact {
+    flex-direction: row;
+    justify-content: space-between;
+    text-align: left;
+  }
+}
+
+@media (max-width: 768px) {
+  body {
+    text-align: center;
+  }
+
+  section:not(#header):not(#footer):not(#statistics) {
+    padding: 2rem 0.625rem;
+  }
+
+  button {
+    width: 100%;
+  }
+
+  #hero p {
+    width: 100%;
+  }
+
+  #statistics {
+    text-align: center;
+  }
+
+  .stats-row {
+    flex-direction: column;
+    align-items: center;
+    margin-top: 3rem;
+    gap: 3rem;
+  }
+
+  #products .products-top {
+    flex-direction: column;
+  }
+
+  .service-category-column {
+    text-align: center;
+  }
+
+  .stat-column {
+    flex: 0;
+}
+}
