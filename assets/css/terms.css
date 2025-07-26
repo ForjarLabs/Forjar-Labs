@@ -1,0 +1,84 @@
+/* Main container styling */
+.hero#terms {
+  padding: 4rem 1.5rem;
+  max-width: 900px;
+  margin: 0 auto;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #222;
+  line-height: 1.7;
+}
+
+/* Each section block */
+.terms_sec {
+  margin-bottom: 3rem;
+}
+
+/* Headings */
+.terms_sec h2 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  color: #111;
+}
+
+.terms_sec h3 {
+  font-size: 1.75rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+  color: #222;
+}
+
+.terms_sec p {
+  font-weight: 600;
+  font-size: 1rem;
+  color: #444;
+  margin-bottom: 0.5rem;
+}
+
+.terms_sec h4 {
+  font-weight: 400;
+  font-size: 1rem;
+  color: #555;
+}
+
+/* List styling */
+.terms_sec ol {
+  margin-top: 0.8rem;
+  padding-left: 1.5rem;
+}
+
+.terms_sec li {
+  margin-bottom: 0.7rem;
+  font-size: 1rem;
+  color: #444;
+  list-style: decimal;
+}
+
+.terms_sec {
+  background-color: #f9f9f9;
+  padding: 2rem;
+  border-radius: 10px;
+}
+
+.terms_sec:not(:first-child) {
+  border-top: 1px solid #e0e0e0;
+  padding-top: 2rem;
+}
+
+
+/* Responsive styling */
+@media (max-width: 768px) {
+  .terms_sec h2 {
+    font-size: 2rem;
+  }
+
+  .terms_sec h3 {
+    font-size: 1.5rem;
+  }
+
+  .terms_sec h4,
+  .terms_sec p,
+  .terms_sec li {
+    font-size: 0.95rem;
+  }
+}

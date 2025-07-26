@@ -1,0 +1,84 @@
+/* Container styling */
+.hero#privy {
+  padding: 4rem 1.5rem;
+  max-width: 900px;
+  margin: 0 auto;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 1.7;
+  color: #222;
+}
+
+/* Individual section blocks */
+.privy_sec {
+  margin-bottom: 3rem;
+}
+
+/* Headings */
+.privy_sec h2 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  font-weight: 700;
+  color: #111;
+}
+
+.privy_sec h3 {
+  font-size: 1.75rem;
+  margin-bottom: 0.5rem;
+  font-weight: 600;
+  color: #222;
+}
+
+.privy_sec p {
+  font-size: 1rem;
+  font-weight: 600;
+  margin-bottom: 0.3rem;
+  color: #555;
+}
+
+.privy_sec h4 {
+  font-size: 1rem;
+  font-weight: 400;
+  color: #444;
+  margin-top: 0.5rem;
+}
+
+/* Ordered list styling */
+.privy_sec ol {
+  padding-left: 1.2rem;
+  margin-top: 1rem;
+}
+
+.privy_sec li {
+  margin-bottom: 1rem;
+  font-size: 0.97rem;
+  color: #444;
+}
+
+.privy_sec li span {
+  font-weight: 600;
+  color: #111;
+}
+
+.privy_sec {
+  background: #f9f9f9;
+  padding: 2rem;
+  border-radius: 10px;
+}
+
+
+/* Responsive typography */
+@media (max-width: 768px) {
+  .privy_sec h2 {
+    font-size: 2rem;
+  }
+
+  .privy_sec h3 {
+    font-size: 1.5rem;
+  }
+
+  .privy_sec h4,
+  .privy_sec p,
+  .privy_sec li {
+    font-size: 0.95rem;
+  }
+}
