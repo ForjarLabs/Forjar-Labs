@@ -544,7 +544,7 @@ textarea {
 .contact-button {
   align-self: flex-start;
   padding: 0.5rem 1.5rem;
-  background-color: var(--color-primary-bg);
+  background-color: var(--color-primary-bg);  
   color: #ffffff;
   font-weight: normal;
   border: none;
