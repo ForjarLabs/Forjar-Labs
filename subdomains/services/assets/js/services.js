@@ -46,24 +46,19 @@ faqItems.forEach((item) => {
 });
 
 document.addEventListener("DOMContentLoaded", () => {
+  const buttons = document.querySelectorAll(".cta-button");
+  buttons.forEach((btn, index) => {
+    btn.addEventListener("click", function (e) {
+      // Format WhatsApp message
+      let whatsappMessage = `*New Audit Booking*`;
 
-  document.getElementById("auditForm").addEventListener("submit", function(e) {
-    e.preventDefault(); // prevent normal form submission
+      // Replace with your WhatsApp number (with country code, no + sign or spaces)
+      let phoneNumber = "2348153048175";
 
-    // Get form values
-    let name = document.getElementById("first-name").value;
-    let email = document.getElementById("email").value;
-    let message = document.getElementById("message").value;
-
-    // Format WhatsApp message
-    let whatsappMessage = `*New Audit Booking*%0A%0A👤 Name: ${name}%0A📧 Email: ${email}%0A💬 Message: ${message}`;
-
-    // Replace with your WhatsApp number (with country code, no + sign or spaces)
-    let phoneNumber = "+2348153048175";
-
-    // Open WhatsApp chat
-    let whatsappURL = `https://wa.me/${phoneNumber}?text=${whatsappMessage}`;
-    window.open(whatsappURL, "_blank");
+      // Open WhatsApp chat
+      let whatsappURL = `https://wa.me/${phoneNumber}?text=${whatsappMessage}`;
+      window.open(whatsappURL, "_blank");
+    });
   });
 
   const siteHeader = document.querySelector("#header");
