@@ -556,7 +556,7 @@ button:hover {
 }
 
 @media (max-width: 600px) {
-  #contact button {
+  button {
     width: 100%;
   }
 }
