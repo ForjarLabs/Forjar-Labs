@@ -27,7 +27,7 @@ prevBtn.addEventListener("click", () => {
 setInterval(() => {
   index = (index + 1) % items.length;
   updateCarousel();
-}, 6000000);
+}, 5000);
 
 // ------- FAQ Accordion -------
 const faqItems = document.querySelectorAll(".FAQ-item");
