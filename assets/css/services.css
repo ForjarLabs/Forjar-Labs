@@ -364,7 +364,9 @@ button:hover {
 
   .testimonial-row button {
     margin-left: 0;
+    width: fit-content;
   }
+
 }
 
 /* ---------- Process ---------- */
@@ -611,7 +613,16 @@ button:hover {
   .FAQ-grid {
     flex-direction: column;
   }
+
+  .FAQ-item button {
+    right: 0;
+  }
   .process-cards-grid {
     grid-template-columns: 1fr; /* single column on mobile */
+  }
+
+  .show-extra-info,
+  .hide-extra-info {
+    width: fit-content;
   }
 }
