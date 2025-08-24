@@ -5,20 +5,22 @@ const prevBtn = document.getElementById("prev");
 const nextBtn = document.getElementById("next");
 
 const carouselItem = document.querySelector(".carousel-item");
-const itemWidth = carouselItem.offsetWidth;
+const itemWidth = carouselItem?.offsetWidth;
 
 let index = 0;
 
 function updateCarousel() {
-  carouselContainer.style.transform = `translateX(-${index * itemWidth}px)`;
+  if (carouselContainer) {
+    carouselContainer.style.transform = `translateX(-${index * itemWidth}px)`;
+  }
 }
 
-nextBtn.addEventListener("click", () => {
+nextBtn?.addEventListener("click", () => {
   index = (index + 1) % items.length;
   updateCarousel();
 });
 
-prevBtn.addEventListener("click", () => {
+prevBtn?.addEventListener("click", () => {
   index = (index - 1 + items.length) % items.length;
   updateCarousel();
 });
@@ -46,6 +48,17 @@ faqItems.forEach((item) => {
 });
 
 document.addEventListener("DOMContentLoaded", () => {
+
+  const case_study_buttons = document.querySelectorAll(".case-study-button");
+  case_study_buttons.forEach((btn) => {
+    btn.addEventListener("click", function (e) {
+      const id = btn.dataset.index;
+      localStorage.setItem("index", parseInt(id));
+
+      window.location.href = "/casestudy";
+    });
+  });
+
   const buttons = document.querySelectorAll(".cta-button");
   buttons.forEach((btn, index) => {
     btn.addEventListener("click", function (e) {
@@ -98,14 +111,14 @@ let position = 0;
 const speed = 1; // pixels per frame
 
 // Clone content so it loops seamlessly
-track.innerHTML += track.innerHTML;
+if (track) track.innerHTML += track.innerHTML;
 
 // Optional: Pause on hover
 const container = document.querySelector(".scroll-container");
 let paused = false;
 
-container.addEventListener("mouseenter", () => (paused = true));
-container.addEventListener("mouseleave", () => (paused = false));
+container?.addEventListener("mouseenter", () => (paused = true));
+container?.addEventListener("mouseleave", () => (paused = false));
 
 function scrollTextWithPause() {
   if (!paused) {
@@ -119,4 +132,4 @@ function scrollTextWithPause() {
 }
 
 // Use this instead if you want pause-on-hover
-scrollTextWithPause();
+if (track) scrollTextWithPause();

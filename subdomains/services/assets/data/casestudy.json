@@ -1,0 +1,153 @@
+{
+  "casestudies": [
+    {
+      "hero": {
+        "title": "LD Photos",
+        "subtitle": "Official website and booking platform for LD Photos, a Nigerian photography brand by two brothers passionate about storytelling. Book sessions, check availability, and connect via WhatsApp.",
+        "image": "/assets/images/casestudy-hero1.png"
+      },
+      "coreStory": {
+        "backstory": [
+          "LD Photos is run by two brothers in Nigeria with a real knack for visual storytelling. Their shoots had that cinematic, frame-worthy quality that makes you think 'I need these guys at my wedding' but their booking process told a very different story.",
+          "Everything lived in their DMs. Instagram. WhatsApp. Facebook. People would send a 'Hi, are you available this Saturday?' message, wait hours for a reply, then maybe come back to confirm days later.",
+          "If you have ever run a service-based business, you know that time kills deals. The longer it takes for someone to go from 'I’m interested' to 'I’ve booked,' the higher the odds they disappear. LD Photos was living that problem every week."
+        ],
+        "projectDetails": {
+          "ProjectType": "Website & Booking System Overhaul",
+          "Industry": "Photography & Creative Services",
+          "ServicesProvided": "UX/UI Design, Custom Booking Flow, Mobile Optimization, WhatsApp Integration, Web Development, Hosting Setup",
+          "EngagementModel": "Full-service build from strategy to launch, with ongoing support for optimization"
+        },
+        "problemStatement": "The main challenge was the absence of a central booking flow, with all requests scattered across messages on different platforms, making it easy for leads to get lost. LD Photos also had no website before we stepped in, which meant they had no dedicated space to showcase their work, list services, or guide clients toward booking. On top of that, the lead-to-booking process was slow, as clients had to wait for manual replies before confirming a date, giving competitors a window to secure those opportunities instead."
+      },
+      "clientSurvey": {
+        "intro": "We interviewed past and potential LD Photos clients, including event planners, wedding couples, and portrait customers, to understand booking frustrations and uncover opportunities to improve the client journey.",
+        "stats": [
+          {
+            "percentage": "65",
+            "title": "Missed Opportunities",
+            "description": "65% of clients said they lost the chance to book because they could not confirm availability quickly enough. By the time they got a reply, they had either found another photographer or their preferred date was no longer open. This lack of instant clarity on available slots directly translated to lost revenue and disappointed clients."
+          },
+          {
+            "percentage": "72",
+            "title": "Slow Confirmations",
+            "description": "72% of clients reported waiting over 24 hours just to receive a booking confirmation. In a service market where decisions are often made on the spot, such delays allowed competitors to step in and secure the job first. This slow turnaround made the booking process feel uncertain and unreliable."
+          },
+          {
+            "percentage": "80",
+            "title": "No Central Hub",
+            "description": "80% highlighted the absence of a dedicated website or booking hub as a major obstacle. Without a single, trusted place to browse services, check availability, and lock in a session, clients had to rely on scattered conversations across social media and messaging apps. This added unnecessary friction and made the process feel disorganized."
+          }
+        ],
+        "summary": [
+          "It was not that LD Photos did not have demand.",
+          "It was that their digital experience did not match the quality of their photography.",
+          "Their portfolio inspired trust, but their process eroded it. A bride-to-be browsing late at night should have been able to check dates, book a slot, and lock it in without waiting until morning for a reply."
+        ],
+        "summaryImage": "/assets/images/research.png"
+      },
+      "solution": {
+        "intro": "We built a booking platform that removes friction at every step, guiding LD Photos’ clients from browsing to confirmed booking in under two minutes.",
+        "items": [
+          {
+            "title": "Story-Driven Homepage",
+            "description": "The homepage leads with LD Photos’ origin story and signature style, supported by their best work in a clean layout.",
+            "image": "/assets/images/solution1.png"
+          },
+          {
+            "title": "Responsive Service Gallery",
+            "description": "A visually immersive gallery showcases their portfolio with crisp, optimized images that load instantly.",
+            "image": "/assets/images/solution1.png"
+          },
+          {
+            "title": "Real-Time Availability Calendar",
+            "description": "A custom JavaScript calendar gives clients an instant view of open dates.",
+            "image": "/assets/images/solution2.png"
+          },
+          {
+            "title": "WhatsApp Booking Integration",
+            "description": "Once a client selects a date, the system opens a pre-filled WhatsApp conversation with LD Photos.",
+            "image": "/assets/images/solution2.png"
+          },
+          {
+            "title": "Mobile-First Performance Optimization",
+            "description": "The entire experience was engineered for a mobile-first audience, with fast-loading assets and adaptive layouts.",
+            "image": "/assets/images/solution3.png"
+          },
+          {
+            "title": "Scalable Admin Framework",
+            "description": "The backend is structured to allow quick upgrades such as online payments and content management.",
+            "image": "/assets/images/solution3.png"
+          }
+        ]
+      },
+      "transformation": {
+        "before": {
+          "description": "LD Photos’ booking process was long and fragmented, requiring clients to go through multiple steps and wait extended periods for confirmation.",
+          "features": [
+            "6–7 steps from initial interest to booking",
+            "Long delays in confirming availability",
+            "Inconsistent client experience across platforms"
+          ]
+        },
+        "after": {
+          "description": "The new platform condensed the booking process into just two clicks and delivered confirmations in minutes.",
+          "features": [
+            "Booking in just 2 clicks from homepage to WhatsApp",
+            "Average confirmation time under 5 minutes",
+            "Fully responsive mobile experience with consistent booking flow"
+          ]
+        }
+      },
+      "impact": {
+        "intro": "In just one month after launch, LD Photos saw measurable growth across bookings, speed, and reach. The new platform not only attracted more clients but also made the booking process faster, smoother, and more mobile-friendly than ever.",
+        "observations": [
+          {
+            "stat": "70%",
+            "title": "Faster Booking Confirmations",
+            "description": "By connecting the calendar directly to WhatsApp, confirmation times dropped from more than 24 hours to under 5 minutes on average, closing the gap where leads previously went cold."
+          },
+          {
+            "stat": "64%",
+            "title": "Confirmed Bookings",
+            "description": "The streamlined calendar and one-click WhatsApp booking flow turned browsing into action. More clients were able to book instantly without waiting for a manual response, resulting in a noticeable boost in secured sessions."
+          },
+          {
+            "stat": "85%",
+            "title": "Bookings Completed on Mobile",
+            "description": "Mobile-first design paid off. Optimized layouts, thumb-friendly navigation, and fast-loading galleries meant clients could book effortlessly from their phones without switching to a desktop."
+          },
+          {
+            "stat": "90%",
+            "title": "Using WhatsApp Deep Link for Booking",
+            "description": "The deep link integration became the preferred booking method almost immediately. Clients trusted WhatsApp as a familiar platform, making it easier to confirm sessions and ask follow-up questions in one place."
+          },
+          {
+            "stat": "+5",
+            "title": "Visitors from 5+ States",
+            "description": "With a modern, responsive site, LD Photos began attracting inter state traffic, expanding their audience beyond Lagos and opening opportunities for destination shoots."
+          }
+        ]
+      },
+      "insights": [
+        {
+          "title": "Engagement Insights",
+          "content": [
+            "This project proved that combining a familiar communication channel like WhatsApp with a structured booking flow can close the gap between interest and action. For service-based brands in mobile-first markets, reducing clicks and delays is not just a UX improvement, it is a direct driver of revenue."
+          ]
+        },
+        {
+          "title": "The Big Takeaway",
+          "content": [
+            "Your online presence should shorten the distance between interest and action. LD Photos’ new platform turned browsing into booking not by luck, but by identifying exactly where the old process was leaking revenue and sealing those gaps.",
+            "When you remove friction, you do not just get more bookings you get back your time, your focus, and your ability to grow without burnout."
+          ]
+        }
+      ],
+      "review": {
+        "quote": "ForjarLabs didn’t just build us a website. They gave us a system that works while we sleep. Bookings are smoother, faster, and our clients love it.",
+        "author": "Leo & Donald of LD Photos"
+      }
+    }
+  ]
+}
