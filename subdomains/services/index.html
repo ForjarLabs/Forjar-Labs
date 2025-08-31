@@ -6,36 +6,39 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta
       name="description"
-      content="Forjar Labs is a lean global studio of senior designers, engineers, and problem solvers. We build scalable digital products, games, and systems."
+      content="Discover hidden revenue opportunities in your business. Most businesses are sitting on 3–5 revenue streams they never notice. We uncover them in 24 hours."
     />
     <meta
       name="keywords"
-      content="Forjar Labs, product design, software engineering, game development, UX, full-stack"
+      content="business audit, hidden revenue, conversion optimization, WhatsApp leads, business growth"
     />
     <meta name="author" content="Forjar Labs" />
-
-    <!-- Canonical URL -->
-    <link rel="canonical" href="https://forjarlabs.agency/" />
-
-    <!-- Open Graph for social sharing -->
+    <!-- Canonical -->
+    <link rel="canonical" href="https://services.forjarlabs.agency/" />
+    <!-- Open Graph -->
     <meta
       property="og:title"
-      content="Forjar Labs – Digital Products, Games & Systems"
+      content="Forjar Labs – Uncover Hidden Revenue in Your Business"
     />
     <meta
       property="og:description"
-      content="A lean global studio of senior designers and engineers. We build digital products and systems that scale."
+      content="Most businesses are sitting on 3–5 revenue streams they never notice. We uncover them in 24 hours."
     />
-    <meta property="og:image" content="/og-image.jpg" />
-    <meta property="og:url" content="https://forjarlabs.agency/" />
+    <meta
+      property="og:image"
+      content="https://services.forjarlabs.agency/og-image.jpg"
+    />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:url" content="https://services.forjarlabs.agency/" />
     <meta property="og:type" content="website" />
 
-    <!-- Favicon Icons -->
+    <!-- Favicons -->
     <link rel="icon" type="image/x-icon" href="/assets/favicons/favicon.ico" />
     <link
       rel="apple-touch-icon"
       sizes="180x180"
-      href="/asssets/favicons/apple-touch-icon.png"
+      href="/assets/favicons/apple-touch-icon.png"
     />
     <link
       rel="icon"
@@ -51,760 +54,394 @@
     />
     <link rel="manifest" href="/assets/favicons/site.webmanifest" />
     <link rel="shortcut icon" href="/assets/favicons/favicon.ico" />
-
-    <!-- Google Fonts: Inter and Anton SC -->
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Anton+SC&family=Inter:wght@400;600;700&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&display=swap"
       rel="stylesheet"
     />
-
     <link
-      href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;500;700&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap"
       rel="stylesheet"
     />
-
-    <!-- External CSS -->
-    <link rel="stylesheet" href="/assets/css/style.css" />
-    <link rel="stylesheet" href="/assets/css/services.css" />
-
-    <!-- Page Title -->
-    <title>Forjar Labs – Digital Products, Games & Systems</title>
-
-    <!-- Optional: Light/Dark Theme Prep -->
-    <meta name="color-scheme" content="light dark" />
+    <link rel="stylesheet" href="/subdomains/services/assets/css/services.css" />
+    <title>Forjar Labs – Uncover Hidden Revenue in Your Business</title>
   </head>
   <body>
+    <!-- Header -->
     <section id="header">
       <header class="header">
         <div class="container">
           <a href="https://forjarlabs.agency/" class="logo">
             <img src="/assets/images/Logo.png" alt="Forjar Labs Logo" />
           </a>
-
-          <!-- Hamburger Button -->
-          <div class="hamburger" aria-label="Toggle navigation">
-            <span></span>
-            <span></span>
-            <span></span>
+          <div
+            class="hamburger"
+            aria-label="Toggle navigation"
+            aria-controls="nav"
+            aria-expanded="false"
+            onclick="toggleNav()"
+          >
+            <span></span><span></span><span></span>
           </div>
-
-          <!-- Navigation Menu -->
-          <nav class="nav">
+          <nav class="nav" id="nav" aria-label="Primary">
             <ul>
               <li><a href="#hero">Home</a></li>
-              <li><a href="#services">Services</a></li>
-              <li><a href="#testimonial">Testimonial</a></li>
-              <li><a href="#FAQs">FAQs</a></li>
+              <li><a href="#social-proof">Results</a></li>
+              <li><a href="#faq">FAQ</a></li>
             </ul>
-            <button class="nav-button cta-button">Book Your Free Audit</button>
+            <a
+              class="nav-button whatsapp-btn"
+              href="https://wa.me/2348153048175?text=Hi!%20I%20want%20to%20uncover%20the%20hidden%20opportunities%20in%20my%20business%20before%20I%20lose%20more%20revenue:%20[BUSINESS_NAME]"
+              target="_blank"
+              rel="noopener"
+              >Show Me What I'm Missing</a
+            >
           </nav>
         </div>
       </header>
     </section>
-
-    <section id="hero">
+    <!-- Hero -->
+    <section id="hero" class="section-container">
       <div class="hero-left-column">
-        <div class="hero-top-left">
-          <h5 class="blink-dot">BOOKING FOR Q3'25</h5>
-          <h1>
-            Losing Clients? <br />
-            <span class="yellow-highlight">Go From 2% to 10% Conversions</span>
-          </h1>
-          <p>
-            We don’t just design, we fix what’s slowing you down. We move with
-            startup urgency and deliver with enterprise precision. From landing
-            pages and e-commerce to MVPs and Series A products, we help you
-            launch faster, convert better, and scale without the hiring
-            headache.
-          </p>
-          <button class="cta-button">Book Your Free Audit</button>
-          <p class="grey-text">
-            Get a free 24-hour audit to uncover leaks in your website or app, no
-            calls, no pitches, just proof.
-          </p>
+        <h5 class="blink-dot">24-HOUR DISCOVERY</h5>
+        <h1>
+          Every Business Has
+          <span class="yellow-highlight">Hidden Revenue</span> Sitting Right In
+          Front of Them
+        </h1>
+        <p>
+          Most businesses are sitting on 3–5 revenue streams they never notice.
+          We uncover them in 24 hours.
+        </p>
+
+        <div class="proof-stats">
+          <span>$2.3M unlocked for 157 clients</span>
+          <span>Avg. 3–5 new streams per business</span>
+          <span>24-hour discovery</span>
         </div>
-        <div class="hero-bottom-left">
-          <p>⭐⭐⭐⭐⭐</p>
-          <h4 class="grey-text">
-            Loved by 50+ startups and brands in
-            <span class="bold">
-              Nigeria, Dubai, Saudi Arabia, Netherlands, and Switzerland.</span
-            >
-          </h4>
-          <div class="logo-row">
-            <img src="/assets/images/logo1.png" alt="logo one" />
-            <img src="/assets/images/logo2.png" alt="logo two" />
-            <img src="/assets/images/logo3.png" alt="logo three" />
-            <img src="/assets/images/logo4.png" alt="logo four" />
-            <img src="/assets/images/logo5.png" alt="logo five" />
-          </div>
-        </div>
+        <a
+          class="whatsapp-btn"
+          href="https://wa.me/2348153048175?text=Hi!%20I%20want%20to%20uncover%20the%20hidden%20opportunities%20in%20my%20business%20before%20I%20lose%20more%20revenue:%20[BUSINESS_NAME]"
+          target="_blank"
+          rel="noopener"
+          >Show Me What I'm Missing</a
+        >
+        <p class="grey-text">
+          Free 24-hour business audit. No calls, no pitches—just opportunities
+          you didn’t know existed.
+        </p>
       </div>
       <div class="hero-right-column">
-        <img
-          src="/assets/images/hero-image-1.png"
-          alt="Hero Image"
-          class="hero-image"
-        />
-        <img
-          src="/assets/images/hero-image-2.png"
-          alt="Hero Image"
-          class="hero-image"
-        />
-      </div>
-    </section>
-
-    <section id="pain-point">
-      <div class="scroll-container">
-        <div class="scroll-track" id="scrollTrack">
-          <h4>24-Hours Audit Delivery</h4>
-          <h4>Private Client Portal</h4>
-          <h4>Done-For-You Fix Recommendations</h4>
-          <h4>Conversion-Focused Approach</h4>
-          <h4>Global Market Expertise</h4>
-          <h4>Proven Case Studies</h4>
-          <h4>Mobile-First Design</h4>
-          <h4>Speed-Optimized Builds</h4>
-          <h4>Scalable Solutions</h4>
-          <h4>No Hiring Headache</h4>
-        </div>
-      </div>
-      <div class="bottom-row">
-        <div class="bottom-left">
-          <img src="/assets/images/pain-point.png" alt="pain-point-image" />
-        </div>
-        <div class="bottom-right">
-          <h1>
-            You Might Be Losing <br />
-            <span class="yellow-highlight">90% of Potential Clients</span>
-            Because…
-          </h1>
-          <ul class="diamond">
-            <li>
-              Your site loads slower than 3 seconds and visitors leave before
-              they even see your offer.
-            </li>
-            <li>
-              Navigation is confusing and 50% of users bounce without taking
-              action.
-            </li>
-            <li>
-              No automation means you waste 20+ hours every week on repetitive
-              tasks.
-            </li>
-            <li>
-              Poor mobile experience is costing you sales with over 60% of
-              traffic coming from phones.
-            </li>
-            <li>
-              You still rely only on Instagram or WhatsApp but have no
-              professional site to convert leads.
-            </li>
-            <li>
-              Competitors look more credible online and win trust faster than
-              you.
-            </li>
-            <li>
-              Your brand story and offers are scattered across platforms with no
-              central hub.
-            </li>
-            <li>
-              You’re not collecting or using customer data to drive repeat sales
-              and growth.
-            </li>
-          </ul>
+        <div class="hero-media" aria-hidden="true">
+          <figure class="hero-card a">
+            <img
+              src="/assets/images/hero-image-1.png"
+              alt="Growth dashboard snapshot"
+              width="560"
+              height="700"
+              loading="eager"
+            />
+          </figure>
+          <figure class="hero-card b">
+            <img
+              src="/assets/images/hero-image-2.png"
+              alt="Revenue discovery snapshot"
+              width="560"
+              height="700"
+              loading="lazy"
+            />
+          </figure>
         </div>
       </div>
     </section>
-
-    <section id="services">
-      <h1>
-        Here’s How We Help You Win <br />
-        <span class="yellow-highlight">More Clients</span> & Save Time
-      </h1>
-      <div class="services-grid">
-        <div class="service-item">
-          <div>
-            <img
-              class="align-left"
-              src="/assets/images/service.png"
-              alt="service-logo"
-            />
+    <!-- Revelation -->
+    <section id="revelation" class="section-container">
+      <div class="revelation-container reveal">
+        <h2>The Money You’re Leaving On The Table</h2>
+        <div class="examples-grid">
+          <div class="example-item reveal">
+            Restaurant with no online ordering (missing $3K+ monthly)
           </div>
-          <h2>Web Design & Development</h2>
-          <p>
-            We design websites that work as hard as you do. Every build is
-            mobile-first, speed-optimized, and structured to guide visitors
-            toward taking action. Whether you need a clean landing page or a
-            complex multi-page site, our focus is on turning interest into
-            measurable results.
-          </p>
-          <button data-index="0" class="case-study-button bg-dark">
-            View Case Study
-          </button>
-        </div>
-        <div class="service-item">
-          <div>
-            <img
-              class="align-left"
-              src="/assets/images/service.png"
-              alt="service-logo"
-            />
+          <div class="example-item reveal">
+            Service business stuck in Instagram DMs (losing 60% of inquiries)
           </div>
-          <h2>App Development</h2>
-          <p>
-            An app should do more than look good, it should solve real problems
-            for your customers. We build fast, functional, and scalable apps
-            that fit seamlessly into your business processes and grow with you.
-            From MVPs to fully featured platforms, we focus on usability and
-            long-term stability.
-          </p>
-          <button data-index="1" class="case-study-button bg-dark">
-            View Case Study
-          </button>
-        </div>
-        <div class="service-item">
-          <div>
-            <img
-              class="align-left"
-              src="/assets/images/service.png"
-              alt="service-logo"
-            />
+          <div class="example-item reveal">
+            Store with no email follow-up (leaving $5K+ uncaptured)
           </div>
-          <h2>AI Tools & Automation</h2>
-          <p>
-            Time is your most valuable asset. We create AI-powered tools and
-            automation workflows that handle repetitive tasks like follow-ups,
-            scheduling, and reporting. This means fewer manual hours for your
-            team and a smoother experience for your customers all built and
-            deployed in days, not months.
-          </p>
-          <button data-index="2" class="case-study-button bg-dark">
-            View Case Study
-          </button>
-        </div>
-        <div class="service-item">
-          <div>
-            <img
-              class="align-left"
-              src="/assets/images/service.png"
-              alt="service-logo"
-            />
+          <div class="example-item reveal">
+            Consultant scheduling manually (wasting 15+ hours weekly)
           </div>
-          <h2>Telegram Bots & Mini Apps</h2>
-          <p>
-            If your audience lives on Telegram, why make them leave? We develop
-            frictionless bots and mini apps that let users browse, order, book,
-            or get updates directly inside Telegram no downloads, no extra
-            steps. Ideal for communities, e-commerce, and financial services.
-          </p>
-          <button data-index="3" class="case-study-button bg-dark">
-            View Case Study
-          </button>
         </div>
-        <div class="service-item">
-          <div>
-            <img
-              class="align-left"
-              src="/assets/images/service.png"
-              alt="service-logo"
-            />
-          </div>
-          <h2>Web3 Development</h2>
-          <p>
-            Blockchain adoption fails when the user experience is unclear. We
-            design and build Web3 products with clean, intuitive interfaces that
-            keep investors confident and end-users engaged. From NFT dashboards
-            to DeFi tools, our work makes complex technology approachable and
-            market-ready.
-          </p>
-          <button data-index="4" class="case-study-button bg-dark">
-            View Case Study
-          </button>
-        </div>
-        <div class="service-item">
-          <div>
-            <img
-              class="align-left"
-              src="/assets/images/service.png"
-              alt="service icon"
-            />
-          </div>
-          <h2>Game Development (Lite Projects)</h2>
-          <p>
-            Games aren’t just for entertainment, they’re a powerful way to drive
-            engagement and loyalty. We create lightweight, branded games that
-            can be used for giveaways, education, or customer rewards. Designed
-            for quick play and high shareability, these micro-games can also
-            open new revenue streams.
-          </p>
-          <button data-index="5" class="case-study-button bg-dark">
-            View Case Study
-          </button>
-        </div>
-      </div>
-    </section>
-
-    <section id="testimonial">
-      <h1>
-        What Our Clients Say After <br />
-        <span class="yellow-highlight">Working With Forjar Labs</span>
-      </h1>
-
-      <div class="row">
-        <p>
-          We’ve helped brands and founders in multiple industries from fashion
-          to e-commerce launch faster, convert more, and build products that
-          actually solve problems.
+        <p class="revelation-closer">
+          The only question is whether you’ll find them before your competitors
+          do.
         </p>
-        <div class="carousel-controls">
-          <button class="carousel-button" id="prev">
-            <h3><</h3>
-          </button>
-          <button class="carousel-button" id="next">
-            <h3>></h3>
-          </button>
-        </div>
+        <a
+          class="whatsapp-btn"
+          href="https://wa.me/2348153048175?text=Hi!%20I%20want%20to%20uncover%20the%20hidden%20opportunities%20in%20my%20business%20before%20I%20lose%20more%20revenue:%20[BUSINESS_NAME]"
+          target="_blank"
+          rel="noopener"
+          >Show Me What I'm Missing</a
+        >
       </div>
-
-      <div class="carousel">
-        <div class="carousel-container">
-          <div class="carousel-item">
-            <h4 class="carousel-header">
-              Tripled Online Orders and Expanded to International Buyers
-            </h4>
+    </section>
+    <!-- Social Proof -->
+    <section id="social-proof" class="section-container">
+      <div class="social-proof-container reveal">
+        <h2>
+          “I Had No Idea I Was
+          <span class="yellow-highlight">Losing So Much</span>”
+        </h2>
+        <div class="testimonials-grid">
+          <div class="testimonial-card glass-card reveal">
             <p>
-              “Before Forjar Labs, our products lived only on Instagram, and
-              orders were getting lost in DMs. They built us a sleek,
-              mobile-first e-commerce site that reflects our streetwear
-              aesthetic and lets customers shop instantly without back-and-forth
-              messages. Within a month, our online orders tripled and we started
-              getting international buyers for the first time.”
+              “I thought Instagram DMs were fine. They showed me I was losing
+              60% of inquiries. New system tripled orders in 30 days.”
             </p>
-            <div class="row testimonial-row">
-              <div class="column">
-                <h4>Halo4ngels</h4>
-                <h5>Clothing Brand</h5>
-              </div>
-              <button>
-                <a href="https://halo4ngels.xyz/" target="_blank"
-                  >Open Website</a
-                >
-              </button>
-            </div>
+            <div class="testimonial-author">— Damian, Halo4ngels, Port Harcourt</div>
           </div>
-          <div class="carousel-item">
-            <h4 class="carousel-header">3x More Rental Inquiries in Dubai</h4>
+          <div class="testimonial-card glass-card reveal">
             <p>
-              "Our old rental site was slow, clunky, and hard to navigate on
-              mobile. Forjar Labs redesigned it with a clean, mobile-first
-              layout and built-in WhatsApp booking. Now clients can browse
-              listings, see real-time availability, and book instantly. In the
-              first two weeks, inquiries went up by 3x and we’ve closed more
-              rentals without increasing our ad spend."
+              “Never considered automation worth it. Their system gave us 3×
+              more rentals without extra marketing spend. Wish I’d called years
+              ago.”
             </p>
-            <div class="row testimonial-row">
-              <div class="column">
-                <h4>Royal Stayscape</h4>
-                <h5>Dubai Apartment Rentals</h5>
-              </div>
-              <button>
-                <a
-                  href="https://www.figma.com/design/qM6qS3HAAy8QjhZ7cSmmwv/Royal-Stayscape?t=nsrbzK94XTzRXkey-1"
-                  target="_blank"
-                  >View Designs</a
-                >
-              </button>
-            </div>
+            <div class="testimonial-author">— Tobi Ogunsomore, Royalstayscape, Dubai</div>
           </div>
-          <div class="carousel-item">
-            <h4 class="carousel-header">
-              40% More Bookings With Automated Scheduling
-            </h4>
+          <div class="testimonial-card glass-card reveal">
             <p>
-              "Managing shoots and bookings used to be chaos with endless
-              back-and-forth messages. Forjar Labs created a site that lets
-              clients browse my portfolio, pick a package, and book directly in
-              my calendar. I now spend 10+ hours less per week on admin and more
-              time shooting, and my bookings have gone up by 40%."
+              “Didn’t think our business needed ‘systems.’ Now we save 10+ hours
+              weekly and bookings are up 40%. Can’t go back to the old way.”
             </p>
-            <div class="row testimonial-row">
-              <div class="column">
-                <h4>LD Photos</h4>
-                <h5>Photography & Booking Site</h5>
-              </div>
-              <button>
-                <a href="https://ldphotos.pro/" target="_blank">Open Website</a>
-              </button>
-            </div>
-          </div>
-          <div class="carousel-item">
-            <h4 class="carousel-header">
-              Doubled Paid Subscribers and Boosted Conversions by 45%
-            </h4>
-            <p>
-              "Before Forjar Labs, Renewed Gen Z had great content but no clear
-              subscription flow and a mobile experience that lost readers. They
-              rebuilt the platform with a clean, mobile-first design, clear
-              value tiers, and a fast, frictionless sign-up process. Within 6
-              weeks, paid subscribers doubled and free-to-paid conversions
-              jumped by 45%, turning the blog into a scalable subscription
-              business."
-            </p>
-            <div class="row testimonial-row">
-              <div class="column">
-                <h4>Renewed Gen Z</h4>
-                <h5>Gen Z Subscription Blog</h5>
-              </div>
-              <button>
-                <a
-                  href="https://www.figma.com/design/iArTZCyHJsBRCNp50cpl1V/Renewed-Gen-Z?node-id=0-1&t=nsrbzK94XTzRXkey-1"
-                  target="_blank"
-                  >View Designs</a
-                >
-              </button>
+            <div class="testimonial-author">
+              — Leo & Donald, LD Photos, Lagos 
             </div>
           </div>
         </div>
-      </div>
-      <h4>
-        Loved by 50+ Startups | 95% Client Retention | 100% On-Time Delivery
-      </h4>
-    </section>
-
-    <section id="process">
-      <h1>
-        From Audit to Launch in <br />
-        <span class="yellow-highlight"> Four Simple Steps </span>
-      </h1>
-      <div class="process-cards-grid">
-        <div class="process-card">
-          <h5 class="bg-cream">Step 1</h5>
-          <h4>Free 24-Hour Audit</h4>
-          <p>
-            We start with a fast, focused review of your website, app, or
-            business presence. In one day, you’ll know what’s working, what’s
-            holding you back, and where the biggest growth opportunities are. If
-            you don’t have a site yet, we’ll map out the best first step for
-            your market.
-          </p>
+        <div class="stats-bar glass-card">
+          <div class="stat-item">
+            <div class="stat-number">$2.3M</div>
+            <div class="stat-label">Unlocked</div>
+          </div>
+          <div class="stat-item">
+            <div class="stat-number">157</div>
+            <div class="stat-label">Revelations</div>
+          </div>
+          <div class="stat-item">
+            <div class="stat-number">24-Hour</div>
+            <div class="stat-label">Discovery</div>
+          </div>
         </div>
-        <div class="process-card">
-          <h5 class="bg-cream">Step 2</h5>
-          <h4>Strategy and Blueprint</h4>
-          <p>
-            Next, we put together a clear, actionable plan tailored to your
-            audience and goals. You’ll see the fixes, features, and design
-            approach that will have the biggest impact, plus a visual concept to
-            bring it to life.
-          </p>
-        </div>
-        <div class="process-card">
-          <h5 class="bg-cream">Step 3</h5>
-          <h4>Build and Implement</h4>
-          <p>
-            We design, develop, and optimize your product with one goal: to make
-            it easy for your customers to say “yes.” Every build is
-            mobile-first, fast-loading, and focused on turning visitors into
-            paying customers.
-          </p>
-        </div>
-        <div class="process-card">
-          <h5 class="bg-cream">Step 4</h5>
-          <h4>Launch and Ongoing Support</h4>
-          <p>
-            Once you’re live, we help you keep improving. From performance
-            tracking to small tweaks that boost conversions, you’ll have the
-            support you need to grow without the stress of managing it all
-            yourself.
-          </p>
-        </div>
+        <a
+          class="whatsapp-btn"
+          href="https://wa.me/2348153048175?text=Hi!%20I%20want%20to%20uncover%20the%20hidden%20opportunities%20in%20my%20business%20before%20I%20lose%20more%20revenue:%20[BUSINESS_NAME]"
+          target="_blank"
+          rel="noopener"
+          >Show Me What I'm Missing</a
+        >
       </div>
     </section>
-
-    <section id="compare">
-      <h1>
-        Why Smart Founders Pick
-        <span class="yellow-highlight">Forjar Labs</span> Instead <br />
-        of Options That End Up
-        <span class="yellow-highlight">Costing More</span>
-      </h1>
-      <div class="table-container">
-        <table>
-          <tr>
-            <th>Feature</th>
-            <th>Forjar Labs</th>
-            <th>Freelancers</th>
-            <th>Subscription Agencies</th>
-          </tr>
-          <tr>
-            <td>Team Talent</td>
-            <td>
-              Senior-only team with proven startup, SaaS, and growth track
-              records. Zero juniors learning on your dime
-            </td>
-            <td>
-              Hit-or-miss quality. Some great, many inexperienced and guessing
-            </td>
-            <td>Mixed skill levels. Often junior-heavy to keep costs low</td>
-          </tr>
-          <tr>
-            <td>Project Management</td>
-            <td>
-              Dedicated PM with structured workflows (async updates, strategy
-              calls, Slack/Trello tracking). Nothing falls through the cracks
-            </td>
-            <td>
-              Self-managed, meaning you chase updates and manage them yourself
-            </td>
-            <td>No dedicated PM. Just a ticket queue and generic responses</td>
-          </tr>
-          <tr>
-            <td>Speed & Flexibility</td>
-            <td>
-              Weekly delivery sprints with unlimited scope adjustments. Adapt
-              fast without losing momentum
-            </td>
-            <td>Limited by one person’s bandwidth. Delays when life happens</td>
-            <td>
-              Slow turnarounds. Stuck in rigid queues. 1–2 tasks at a time
-            </td>
-          </tr>
-          <tr>
-            <td>Cost Efficiency</td>
-            <td>
-              Transparent, flat rates with maximum output per dollar. Built for
-              ROI, not just “cheap”
-            </td>
-            <td>
-              Affordable for small one-off work but expensive if you need
-              ongoing results
-            </td>
-            <td>Looks cheap but low-quality output often costs more to fix</td>
-          </tr>
-          <tr>
-            <td>Total Cost</td>
-            <td>$</td>
-            <td>$$</td>
-            <td>$$$</td>
-          </tr>
-          <tr>
-            <td>Team Availability</td>
-            <td>
-              Always covered. No ghosting, no downtime, no dropped projects
-            </td>
-            <td>High risk of burnout, ghosting, or disappearing mid-project</td>
-            <td>Shared pool of overworked staff. Inconsistent availability</td>
-          </tr>
-        </table>
-      </div>
-      <div class="perks-row">
-        <div class="perk">
-          <img src="/assets/images/smartphone.png" alt="smartphone" />
-          <h5>Instant onboarding</h5>
-          <p>
-            Skip the hiring delays. Start seeing results in days, not weeks.
-          </p>
+    <!-- Value Proposition -->
+    <section id="value-prop" class="section-container">
+      <div class="value-container reveal">
+        <h2>We See What <span class="yellow-highlight">You Can’t</span></h2>
+        <div class="value-grid">
+          <div class="value-item glass-card reveal">
+            <h3>Hidden Income</h3>
+            <p>Revenue streams hiding in your current business model</p>
+          </div>
+          <div class="value-item glass-card reveal">
+            <h3>Invisible Waste</h3>
+            <p>Time and money leaks you don’t know exist</p>
+          </div>
+          <div class="value-item glass-card reveal">
+            <h3>Untapped Systems</h3>
+            <p>Automation opportunities that multiply results without effort</p>
+          </div>
         </div>
-        <div class="perk">
-          <img src="/assets/images/smartphone.png" alt="smartphone" />
-          <h5>High-impact, low overhead</h5>
-          <p>
-            No full-time salaries or bloated costs just senior design that
-            delivers.
-          </p>
-        </div>
-        <div class="perk">
-          <img src="/assets/images/smartphone.png" alt="smartphone" />
-          <h5>Stress-free collaboration</h5>
-          <p>We take full ownership of your project, from start to finish.</p>
-        </div>
+        <a
+          class="whatsapp-btn"
+          href="https://wa.me/2348153048175?text=Hi!%20I%20want%20to%20uncover%20the%20hidden%20opportunities%20in%20my%20business%20before%20I%20lose%20more%20revenue:%20[BUSINESS_NAME]"
+          target="_blank"
+          rel="noopener"
+          >Show Me What I'm Missing</a
+        >
       </div>
     </section>
-
-    <section id="audit">
-      <div class="row">
-        <div class="audit-left">
-          <h1>
-            Every Day Without the Right Website =
-            <span class="yellow-highlight">Lost Revenue</span>
-          </h1>
-          <p>
-            Whether you have a site that’s leaking sales or no site at all,
-            we’ll audit your business and give you the blueprint for a
-            high-converting landing page or a full development build. We’ve
-            helped businesses like yours triple conversions let’s do the same
-            for you.
-          </p>
-          <button class="cta-button">Book Your Free Audit</button>
-          <p class="grey-text italic">
-            Leaving without your free audit? Let us show you the gaps in your
-            current site or help create the plan for your first one in 24 hours.
-          </p>
+    <!-- Capabilities -->
+    <section id="capabilities" class="section-container">
+      <div class="capabilities-container reveal">
+        <h2>
+          The Systems Your Business
+          <span class="yellow-highlight">Actually Needs</span>
+        </h2>
+        <div class="capabilities-grid">
+          <div class="capability-item glass-card reveal">
+            <h3>Turn Clicks Into Customers</h3>
+            <p>Sites and funnels that actually convert visitors into revenue</p>
+          </div>
+          <div class="capability-item glass-card reveal">
+            <h3>Sell While You Sleep</h3>
+            <p>Automated systems that work when you don’t</p>
+          </div>
+          <div class="capability-item glass-card reveal">
+            <h3>Tools That Fit You</h3>
+            <p>Custom software built for how you actually work</p>
+          </div>
+          <div class="capability-item glass-card reveal">
+            <h3>AI That Handles Boring Stuff</h3>
+            <p>Automation for repetitive tasks you hate doing</p>
+          </div>
+          <div class="capability-item glass-card reveal">
+            <h3>Meet Customers Where They Are</h3>
+            <p>WhatsApp, Telegram, whatever platform they prefer</p>
+          </div>
+          <div class="capability-item glass-card reveal">
+            <h3>Growth Without Stress</h3>
+            <p>Systems that scale your business, not your workload</p>
+          </div>
         </div>
-        <div class="audit-right">
-          <img src="/assets/images/CTA.png" alt="CTA image" />
-        </div>
+        <a
+          class="whatsapp-btn"
+          href="https://wa.me/2348153048175?text=Hi!%20I%20want%20to%20uncover%20the%20hidden%20opportunities%20in%20my%20business%20before%20I%20lose%20more%20revenue:%20[BUSINESS_NAME]"
+          target="_blank"
+          rel="noopener"
+          >Show Me What I'm Missing</a
+        >
       </div>
     </section>
-
-    <section id="FAQs">
-      <h1>
-        Questions <span class="yellow-highlight"> Smart Founders </span> Ask
-        <br />
-        Before They Work With Us
-      </h1>
-      <p>
-        We believe in clarity before commitment. Here’s everything you need to
-        know before we get started, no sales tricks, just straight answers.
-      </p>
-      <div class="FAQ-grid">
-        <div class="left-column">
-          <div class="FAQ-item">
-            <h3 class="black-to-grey-gradient">01</h3>
-            <div>
-              <p class="FAQ-subject">Why is the audit free?</p>
-              <p class="FAQ-extra-info">
-                We believe in proving value before asking for your business.
-                Once you see what’s possible, you’ll understand why most clients
-                choose us.
-              </p>
-            </div>
-            <button class="show-extra-info">+</button>
-            <button class="hide-extra-info">x</button>
+    <!-- Urgency -->
+    <section id="urgency" class="section-container">
+      <div class="urgency-container reveal">
+        <h2>
+          8 Discovery Sessions
+          <span class="yellow-highlight">Left This Month</span>
+        </h2>
+        <div class="spots-counter glass-card">
+          <div class="spots-number">8</div>
+          <div class="spots-label">Discovery Sessions Remaining</div>
+          <div class="next-opening">
+            September: 67% complete • Next opening: October 15th
           </div>
-          <div class="FAQ-item">
-            <h3 class="black-to-grey-gradient">02</h3>
-            <div>
-              <p class="FAQ-subject">What if I don’t have a website yet?</p>
-              <p class="FAQ-extra-info">
-                That’s okay. We can review your online presence; socials,
-                listings, and strategy—to give you clear next steps.
-              </p>
+          <div class="countdown-timer">
+            <div class="timer-unit">
+              <div class="timer-number" id="days">00</div>
+              <div class="timer-label">Days</div>
             </div>
-            <button class="show-extra-info">+</button>
-            <button class="hide-extra-info">x</button>
-          </div>
-          <div class="FAQ-item">
-            <h3 class="black-to-grey-gradient">03</h3>
-            <div>
-              <p class="FAQ-subject">Do I need to book a call?</p>
-              <p class="FAQ-extra-info">
-                You could but no call is required. You’ll receive your audit
-                directly in your inbox.
-              </p>
+            <div class="timer-unit">
+              <div class="timer-number" id="hours">00</div>
+              <div class="timer-label">Hours</div>
             </div>
-            <button class="show-extra-info">+</button>
-            <button class="hide-extra-info">x</button>
-          </div>
-          <div class="FAQ-item">
-            <h3 class="black-to-grey-gradient">04</h3>
-            <div>
-              <p class="FAQ-subject">How fast will I get my audit?</p>
-              <p class="FAQ-extra-info">
-                Most audits are delivered within 48 hours.
-              </p>
+            <div class="timer-unit">
+              <div class="timer-number" id="minutes">00</div>
+              <div class="timer-label">Minutes</div>
             </div>
-            <button class="show-extra-info">+</button>
-            <button class="hide-extra-info">x</button>
+            <div class="timer-unit">
+              <div class="timer-number" id="seconds">00</div>
+              <div class="timer-label">Seconds</div>
+            </div>
           </div>
         </div>
-        <div class="right-column">
-          <div class="FAQ-item">
-            <h3 class="black-to-grey-gradient">05</h3>
-            <div>
-              <p class="FAQ-subject">
-                Will you try to sell me something after?
-              </p>
-              <p class="FAQ-extra-info">
-                No hard selling. We simply share our findings, and you decide if
-                you’d like help implementing them.
-              </p>
-            </div>
-            <button class="show-extra-info">+</button>
-            <button class="hide-extra-info">x</button>
-          </div>
-          <div class="FAQ-item">
-            <h3 class="black-to-grey-gradient">06</h3>
-            <div>
-              <p class="FAQ-subject">Is this just a generic template?</p>
-              <p class="FAQ-extra-info">
-                Not at all. Every audit is tailored to your business and goals.
-              </p>
-            </div>
-            <button class="show-extra-info">+</button>
-            <button class="hide-extra-info">x</button>
-          </div>
-          <div class="FAQ-item">
-            <h3 class="black-to-grey-gradient">07</h3>
-            <div>
-              <p class="FAQ-subject">What kinds of businesses can you audit?</p>
-              <p class="FAQ-extra-info">
-                We work with startups, service providers, e-commerce stores, and
-                established brands across industries.
-              </p>
-            </div>
-            <button class="show-extra-info">+</button>
-            <button class="hide-extra-info">x</button>
-          </div>
-          <div class="FAQ-item">
-            <h3 class="black-to-grey-gradient">08</h3>
-            <div>
-              <p class="FAQ-subject">How much detail will I get?</p>
-              <p class="FAQ-extra-info">
-                Expect a clear breakdown with actionable insights, not just
-                surface-level feedback.
-              </p>
-            </div>
-            <button class="show-extra-info">+</button>
-            <button class="hide-extra-info">x</button>
-          </div>
-        </div>
+        <p>
+          Competitors who move first capture the wins. Don’t be the one left
+          guessing.
+        </p>
+        <a
+          class="whatsapp-btn"
+          href="https://wa.me/2348153048175?text=Hi!%20I%20want%20to%20uncover%20the%20hidden%20opportunities%20in%20my%20business%20before%20I%20lose%20more%20revenue:%20[BUSINESS_NAME]"
+          target="_blank"
+          rel="noopener"
+          >Show Me What I'm Missing</a
+        >
       </div>
     </section>
+    <!-- FAQ -->
+    <section id="faq" class="section-container">
+      <div class="faq-container reveal">
+        <h2>
+          “What If This <span class="yellow-highlight">Isn’t For Me?</span>”
+        </h2>
 
-    <section id="contact">
-      <button class="cta-button">BOOK YOUR FREE AUDIT NOW</button>
+        <div class="faq-grid">
+          <div class="faq-item glass-card" onclick="toggleFaq(this)">
+            <div class="faq-question">
+              What if my business is too simple for this?
+              <span class="faq-toggle">+</span>
+            </div>
+            <div class="faq-answer">
+              Simple businesses often have the biggest hidden opportunities.
+              We’ve never audited one without finding money left on the table.
+            </div>
+          </div>
+
+          <div class="faq-item glass-card" onclick="toggleFaq(this)">
+            <div class="faq-question">
+              What if you don’t find anything worth fixing?
+              <span class="faq-toggle">+</span>
+            </div>
+            <div class="faq-answer">
+              Hasn’t happened in 6 years, but if we can’t find $5K+ in
+              opportunities, the audit is free.
+            </div>
+          </div>
+
+          <div class="faq-item glass-card" onclick="toggleFaq(this)">
+            <div class="faq-question">
+              What if I can’t afford what you recommend?
+              <span class="faq-toggle">+</span>
+            </div>
+            <div class="faq-answer">
+              We always find free wins first. Most clients see ROI before
+              spending anything.
+            </div>
+          </div>
+        </div>
+        <a
+          class="whatsapp-btn"
+          href="https://wa.me/2348153048175?text=Hi!%20I%20want%20to%20uncover%20the%20hidden%20opportunities%20in%20my%20business%20before%20I%20lose%20more%20revenue:%20[BUSINESS_NAME]"
+          target="_blank"
+          rel="noopener"
+          >Show Me What I'm Missing</a
+        >
+      </div>
     </section>
-
+    <!-- Footer -->
     <section id="footer">
-      <footer>
+      <footer class="section-container">
         <div class="footer-content">
-          <h1 class="logo-text">Forjar labs©</h1>
+          <h1 class="logo-text">Forjar Labs</h1>
           <p>
             For people building real things: lessons on product, systems, and
-            staying sharp, from a founder who’s obsessed with clarity and
-            results.
+            staying sharp, from a founder obsessed with clarity and results.
           </p>
-          <form action="submit">
+          <form action="#" method="post">
             <input
               type="email"
               name="footer-email"
               id="footer-email"
               placeholder="Enter Your Email Address"
+              aria-label="Email address"
             />
             <button type="submit">Subscribe</button>
           </form>
         </div>
-
-        <!-- Full-width Sitemap -->
         <div class="sitemap">
           <div class="area">
             <h4>(Site)</h4>
             <ul>
               <li><a href="#hero">Home</a></li>
-              <li><a href="#servives">Services</a></li>
-              <li><a href="#testimonial">Testimonial</a></li>
-              <li><a href="#FAQs">About</a></li>
-              <li><a href="#contact">Contact</a></li>
+              <li><a href="#social-proof">Results</a></li>
+              <li><a href="#faq">FAQ</a></li>
             </ul>
           </div>
           <div class="area">
             <h4>(Journal)</h4>
             <ul>
-              <li><a href="">Articles</a></li>
-              <li><a href="">Behind the Build</a></li>
-              <li><a href="">Founder Notes</a></li>
+              <li><a href="#">Articles</a></li>
+              <li><a href="#">Behind the Build</a></li>
+              <li><a href="#">Founder Notes</a></li>
             </ul>
           </div>
           <div class="area">
@@ -824,28 +461,28 @@
                 >
               </li>
               <li>
-                <a
-                  href="https://www.instagram.com/forjarlabs?igsh=MTJ5bXJtZzYzcWRiMA=="
-                  >Instagram</a
-                >
+                <a href="https://www.instagram.com/forjarlabs">Instagram</a>
               </li>
-              <li>
-                <a href="https://x.com/forjarlabs?t=cXx8-m5CPxr718Tx9zcvFg&s=08"
-                  >Twitter</a
-                >
-              </li>
+              <li><a href="https://x.com/forjarlabs">Twitter</a></li>
               <li><a href="https://dribbble.com/ForjarLabs">Dribbble</a></li>
             </ul>
           </div>
         </div>
 
         <div class="footer-bottom">
-          <p class="copyright"></p>
-          <p class="scroll-up">Back to Top</p>
+          <p class="copyright">©️ 2025 Forjar Labs. All rights reserved.</p>
+          <p class="scroll-up" onclick="scrollToTop()">Back to Top</p>
         </div>
       </footer>
     </section>
-
-    <script src="/assets/js/services.js"></script>
+    <!-- Mobile Fixed WhatsApp Button -->
+    <a
+      class="whatsapp-btn mobile-whatsapp-fixed"
+      href="https://wa.me/2348153048175?text=Hi!%20I%20want%20to%20uncover%20the%20hidden%20opportunities%20in%20my%20business%20before%20I%20lose%20more%20revenue:%20[BUSINESS_NAME]"
+      target="_blank"
+      rel="noopener"
+      >Show Me What I’m Missing</a
+    >
+    <script src="/subdomains/services/assets/js/services.js"></script>
   </body>
 </html>
