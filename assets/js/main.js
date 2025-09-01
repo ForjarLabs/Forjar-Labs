@@ -31,12 +31,27 @@ document.addEventListener("DOMContentLoaded", () => {
           const href = element.href;
 
           if (pathname.includes(href)) {
-           element.classList.add("active");
+            element.classList.add("active");
           }
         });
       })
       .catch((error) => console.error("Error loading header:", error));
   }
+
+  const buttons = document.querySelectorAll(".contact-button");
+  buttons.forEach((btn, index) => {
+    btn.addEventListener("click", function (e) {
+      // Format WhatsApp message
+      let whatsappMessage = `*New Audit Booking*`;
+
+      // Replace with your WhatsApp number (with country code, no + sign or spaces)
+      let phoneNumber = "2348153048175";
+
+      // Open WhatsApp chat
+      let whatsappURL = `https://wa.me/${phoneNumber}?text=${whatsappMessage}`;
+      window.open(whatsappURL, "_blank");
+    });
+  });
 
   // Load footer component
   const footerPlaceholder = document.getElementById("footer-placeholder");
