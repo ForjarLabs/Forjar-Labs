@@ -1,63 +1,185 @@
-// Mobile nav
+// ============== NAV ==============
 function toggleNav() {
   const nav = document.getElementById("nav");
   const hamburger = document.querySelector(".hamburger");
+  if (!nav || !hamburger) return;
+
   const expanded = hamburger.getAttribute("aria-expanded") === "true";
   nav.classList.toggle("open");
   hamburger.classList.toggle("open");
   hamburger.setAttribute("aria-expanded", (!expanded).toString());
+
+  // Lock scroll on mobile when open
+  document.documentElement.style.overflow = nav.classList.contains("open")
+    ? "hidden"
+    : "";
 }
 
-// FAQ with auto-close
-function toggleFaq(el) {
-  const active = document.querySelector(".faq-item.active");
-  if (active && active !== el) {
-    active.classList.remove("active");
-    active.querySelector(".faq-toggle").textContent = "+";
+// Esc closes mobile nav
+document.addEventListener("keydown", (e) => {
+  if (e.key === "Escape") {
+    const nav = document.getElementById("nav");
+    const hamburger = document.querySelector(".hamburger");
+    if (nav && hamburger && nav.classList.contains("open")) {
+      nav.classList.remove("open");
+      hamburger.classList.remove("open");
+      hamburger.setAttribute("aria-expanded", "false");
+      document.documentElement.style.overflow = "";
+    }
   }
-  el.classList.toggle("active");
-  const q = el.querySelector(".faq-toggle");
-  if (q) q.textContent = el.classList.contains("active") ? "−" : "+";
-}
+});
 
-// Scroll to top
-function scrollToTop() {
-  window.scrollTo({ top: 0, behavior: "smooth" });
-}
+// Close mobile nav on internal link click
+document.addEventListener("click", (e) => {
+  const a = e.target.closest("a");
+  if (!a) return;
+  const href = a.getAttribute("href") || "";
+  if (!href.startsWith("#")) return; // internal only
 
-// Smooth scroll for internal anchors
+  const nav = document.getElementById("nav");
+  const hamburger = document.querySelector(".hamburger");
+  if (nav && hamburger && nav.classList.contains("open")) {
+    nav.classList.remove("open");
+    hamburger.classList.remove("open");
+    hamburger.setAttribute("aria-expanded", "false");
+    document.documentElement.style.overflow = "";
+  }
+});
+
+// ============== SMOOTH SCROLL (internal anchors) ==============
 document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
   anchor.addEventListener("click", function (e) {
-    const target = document.querySelector(this.getAttribute("href"));
+    const id = this.getAttribute("href");
+    const target = id && document.querySelector(id);
     if (target) {
       e.preventDefault();
       target.scrollIntoView({ behavior: "smooth", block: "start" });
+      // Update hash without jumping
+      history.pushState(null, "", id);
     }
   });
 });
 
-// Close mobile nav on link click
-document.querySelectorAll(".nav a").forEach((link) => {
-  link.addEventListener("click", () => {
-    const nav = document.getElementById("nav");
-    const hamburger = document.querySelector(".hamburger");
-    nav.classList.remove("open");
-    hamburger.classList.remove("open");
-    hamburger.setAttribute("aria-expanded", "false");
-  });
-});
-
-// Header on scroll
-window.addEventListener("scroll", () => {
+// ============== SCROLL EFFECTS (rAF-throttled) ==============
+(() => {
+  const prefersReduced = window.matchMedia(
+    "(prefers-reduced-motion: reduce)"
+  ).matches;
   const header = document.getElementById("header");
-  if (window.scrollY > 100) {
-    header.style.background = "rgba(255, 255, 255, 0.9)";
-  } else {
-    header.style.background = "rgba(255, 255, 255, 0.8)";
-  }
-});
+  let ticking = false;
 
-// Mobile fixed CTA visibility
+  function onScroll() {
+    if (ticking) return;
+    ticking = true;
+    requestAnimationFrame(() => {
+      const y = window.scrollY || window.pageYOffset;
+
+      // Header state
+      if (header) {
+        if (y > 100) {
+          header.style.background = "rgba(255, 255, 255, 0.92)";
+          header.style.boxShadow = "0 6px 18px rgba(2,8,23,.06)";
+        } else {
+          header.style.background = "rgba(255, 255, 255, 0.92)";
+          header.style.boxShadow = "none";
+        }
+      }
+
+      // Parallax (skip if reduced motion)
+      if (!prefersReduced) {
+        document.documentElement.style.setProperty(
+          "--parallax-a",
+          `${y * 0.2}px`
+        );
+        document.documentElement.style.setProperty(
+          "--parallax-b",
+          `${y * 0.1}px`
+        );
+      }
+
+      ticking = false;
+    });
+  }
+
+  window.addEventListener("scroll", onScroll, { passive: true });
+  onScroll();
+})();
+
+// ============== SCROLL REVEAL (IntersectionObserver) ==============
+(() => {
+  const prefersReduced = window.matchMedia(
+    "(prefers-reduced-motion: reduce)"
+  ).matches;
+  const items = document.querySelectorAll(".reveal");
+  if (!items.length) return;
+
+  if (prefersReduced || !("IntersectionObserver" in window)) {
+    items.forEach((el) => el.classList.add("visible"));
+    return;
+  }
+
+  const obs = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("visible");
+          obs.unobserve(entry.target);
+        }
+      });
+    },
+    { threshold: 0.08 }
+  );
+
+  items.forEach((el) => obs.observe(el));
+})();
+
+// ============== FAQ (Details as accordion with auto-close) ==============
+(() => {
+  const details = Array.from(document.querySelectorAll(".faq-item"));
+  if (!details.length) return;
+
+  // Normalize initial state
+  details.forEach((d) => {
+    d.classList.toggle("active", d.open === true);
+    const t = d.querySelector(".faq-toggle");
+    if (t) t.textContent = d.open ? "−" : "+";
+  });
+
+  document.querySelector(".faq-grid")?.addEventListener(
+    "toggle",
+    (e) => {
+      const el = e.target;
+      if (!el.classList || !el.classList.contains("faq-item")) return;
+
+      if (el.open) {
+        // Close others
+        details.forEach((d) => {
+          if (d !== el) {
+            d.open = false;
+            d.classList.remove("active");
+            const t = d.querySelector(".faq-toggle");
+            if (t) t.textContent = "+";
+          }
+        });
+        el.classList.add("active");
+        const t = el.querySelector(".faq-toggle");
+        if (t) t.textContent = "−";
+      } else {
+        el.classList.remove("active");
+        const t = el.querySelector(".faq-toggle");
+        if (t) t.textContent = "+";
+      }
+    },
+    true
+  );
+})();
+
+// ============== SCROLL TO TOP BUTTON API ==============
+function scrollToTop() {
+  window.scrollTo({ top: 0, behavior: "smooth" });
+}
+
+// ============== MOBILE FIXED CTA VISIBILITY ==============
 function checkMobileButton() {
   const mobileBtn = document.querySelector(".mobile-whatsapp-fixed");
   if (!mobileBtn) return;
@@ -66,68 +188,76 @@ function checkMobileButton() {
 window.addEventListener("resize", checkMobileButton);
 document.addEventListener("DOMContentLoaded", checkMobileButton);
 
-// Parallax hero
-window.addEventListener("scroll", () => {
-  const scrollY = window.scrollY;
-  document.documentElement.style.setProperty(
-    "--parallax-a",
-    `${scrollY * 0.2}px`
-  );
-  document.documentElement.style.setProperty(
-    "--parallax-b",
-    `${scrollY * 0.1}px`
-  );
-});
+// Weekly countdown → Friday 23:59:59 WAT (auto-restart every week)
+(() => {
+  const daysEl = document.getElementById("days");
+  const hoursEl = document.getElementById("hours");
+  const minsEl = document.getElementById("minutes");
+  const secsEl = document.getElementById("seconds");
+  if (!daysEl || !hoursEl || !minsEl || !secsEl) return;
 
-// Scroll reveal
-const reveals = document.querySelectorAll(".reveal");
-const observer = new IntersectionObserver(
-  (entries) => {
-    entries.forEach((entry) => {
-      if (entry.isIntersecting) {
-        entry.target.classList.add("visible");
-      }
-    });
-  },
-  { threshold: 0.1 }
-);
-reveals.forEach((reveal) => observer.observe(reveal));
+  const MS = 1000;
+  const SEC = MS;
+  const MIN = 60 * SEC;
+  const HOUR = 60 * MIN;
+  const DAY = 24 * HOUR;
+  const WAT_OFFSET_MS = 1 * HOUR; // Africa/Lagos = UTC+1 year-round (no DST)
+  const FRIDAY = 5; // 0=Sun ... 5=Fri
 
-// Live countdown timer (example to Oct 15, 2025)
-function updateCountdown() {
-  const endDate = new Date("2025-10-15T00:00:00");
-  const now = new Date();
-  const diff = endDate - now;
-  if (diff > 0) {
-    const days = Math.floor(diff / (1000 * 60 * 60 * 24));
-    const hours = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-    const minutes = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
-    const seconds = Math.floor((diff % (1000 * 60)) / 1000);
-    document.getElementById("days").textContent = days
-      .toString()
-      .padStart(2, "0");
-    document.getElementById("hours").textContent = hours
-      .toString()
-      .padStart(2, "0");
-    document.getElementById("minutes").textContent = minutes
-      .toString()
-      .padStart(2, "0");
-    document.getElementById("seconds").textContent = seconds
-      .toString()
-      .padStart(2, "0");
-  } else {
-    document
-      .querySelectorAll(".timer-number")
-      .forEach((el) => (el.textContent = "00"));
+  function nextFriday2359UTCms(nowUTC) {
+    // Represent "local WAT clock" by shifting UTC +1h and using UTC getters.
+    const nowWAT = new Date(nowUTC.getTime() + WAT_OFFSET_MS);
+
+    const y = nowWAT.getUTCFullYear();
+    const m = nowWAT.getUTCMonth();
+    const d = nowWAT.getUTCDate();
+    const dow = nowWAT.getUTCDay();
+
+    // Days to this week's Friday (or 0 if already Friday)
+    const addDays = (FRIDAY - dow + 7) % 7;
+
+    // 23:59:59 WAT == 22:59:59 UTC
+    let targetUTC = Date.UTC(y, m, d + addDays, 22, 59, 59, 0);
+
+    // If we've already passed this week's Friday 23:59:59 WAT, push to next Friday
+    if (nowUTC.getTime() >= targetUTC) targetUTC += 7 * DAY;
+
+    return targetUTC;
   }
-}
-setInterval(updateCountdown, 1000);
-updateCountdown();
 
-// Update footer year
+  function update() {
+    const now = new Date();
+    const target = nextFriday2359UTCms(now);
+    let diff = target - now.getTime();
+    if (diff < 0) diff = 0; // safety
+
+    const days = Math.floor(diff / DAY);
+    const hours = Math.floor((diff % DAY) / HOUR);
+    const minutes = Math.floor((diff % HOUR) / MIN);
+    const seconds = Math.floor((diff % MIN) / SEC);
+
+    daysEl.textContent = String(days).padStart(2, "0");
+    hoursEl.textContent = String(hours).padStart(2, "0");
+    minsEl.textContent = String(minutes).padStart(2, "0");
+    secsEl.textContent = String(seconds).padStart(2, "0");
+  }
+
+  update();
+  const id = setInterval(update, 1000);
+
+  // Stop ticking if elements disappear
+  const mo = new MutationObserver(() => {
+    if (!document.body.contains(daysEl)) {
+      clearInterval(id);
+      mo.disconnect();
+    }
+  });
+  mo.observe(document.body, { childList: true, subtree: true });
+})();
+
+// ============== FOOTER YEAR ==============
 document.addEventListener("DOMContentLoaded", () => {
   const el = document.querySelector(".copyright");
-  if (el) {
+  if (el)
     el.textContent = `©️ ${new Date().getFullYear()} Forjar Labs. All rights reserved.`;
-  }
 });
