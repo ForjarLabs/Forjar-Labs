@@ -38,19 +38,29 @@ document.addEventListener("DOMContentLoaded", () => {
       .catch((error) => console.error("Error loading header:", error));
   }
 
-  const buttons = document.querySelectorAll(".contact-button");
-  buttons.forEach((btn, index) => {
-    btn.addEventListener("click", function (e) {
-      // Format WhatsApp message
-      let whatsappMessage = `*New Audit Booking*`;
+  const form = document.getElementById("contact-form");
+  const phoneNumber = "2348153048175"; // your WhatsApp number
 
-      // Replace with your WhatsApp number (with country code, no + sign or spaces)
-      let phoneNumber = "2348153048175";
+  form.addEventListener("submit", function (e) {
+    e.preventDefault(); // stop normal form submit
 
-      // Open WhatsApp chat
-      let whatsappURL = `https://wa.me/${phoneNumber}?text=${whatsappMessage}`;
-      window.open(whatsappURL, "_blank");
-    });
+    const name = document.getElementById("first-name").value.trim();
+    const email = document.getElementById("email").value.trim();
+    const message = document.getElementById("message").value.trim();
+
+    // WhatsApp message format
+    let whatsappMessage =
+      `*New Audit Booking*\n\n` +
+      `👤 Name: ${name}\n` +
+      `📧 Email: ${email}\n` +
+      `💬 Message: ${message}`;
+
+    // Encode for URL
+    let whatsappURL = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(
+      whatsappMessage
+    )}`;
+
+    window.open(whatsappURL, "_blank");
   });
 
   // Load footer component

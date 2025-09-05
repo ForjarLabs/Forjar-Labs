@@ -244,26 +244,28 @@
           with people building real things.
         </p>
 
-        <form action="submit">
-          <div class="form-row">
-            <label for="first-name">(Name)</label>
-            <input
-              type="text"
-              name="first-name"
-              id="first-name"
-              placeholder="First Name"
-            />
-            <label for="email">(Email)</label>
-            <input
-              type="email"
-              name="email"
-              id="email"
-              placeholder="Email Address"
-            />
-          </div>
-          <textarea name="Message" id="message"></textarea>
-          <button class="contact-button">Send Message</button>
-        </form>
+       <form id="contact-form">
+  <div class="form-row">
+    <label for="first-name">(Name)</label>
+    <input
+      type="text"
+      name="first-name"
+      id="first-name"
+      placeholder="First Name"
+      required
+    />
+    <label for="email">(Email)</label>
+    <input
+      type="email"
+      name="email"
+      id="email"
+      placeholder="Email Address"
+      required
+    />
+  </div>
+  <textarea name="message" id="message" required></textarea>
+  <button type="submit" class="contact-button">Send Message</button>
+</form>
       </div>
     </section>
 

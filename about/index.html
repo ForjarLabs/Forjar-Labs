@@ -320,7 +320,11 @@
           </p>
         </div>
         <div class="message-top-right-column">
-          <button><a href="https://services.forjarlabs.agency/">Visit Our Services Portal</a></button>
+          <button>
+            <a href="https://services.forjarlabs.agency/"
+              >Visit Our Services Portal</a
+            >
+          </button>
         </div>
       </div>
       <div class="message-bottom-row">
@@ -387,33 +391,27 @@
           with people building real things.
         </p>
 
-        <form action="submit">
+        <form id="contact-form">
           <div class="form-row">
-            <div class="name-column">
-              <label for="first-name">(Name)</label>
-              <input
-                type="text"
-                name="first-name"
-                id="first-name"
-                placeholder="First Name"
-              />
-            </div>
-            <div class="email-column">
-              <label for="email">(Email)</label>
-              <input
-                type="email"
-                name="email"
-                id="email"
-                placeholder="Email Address"
-              />
-            </div>
+            <label for="first-name">(Name)</label>
+            <input
+              type="text"
+              name="first-name"
+              id="first-name"
+              placeholder="First Name"
+              required
+            />
+            <label for="email">(Email)</label>
+            <input
+              type="email"
+              name="email"
+              id="email"
+              placeholder="Email Address"
+              required
+            />
           </div>
-          <textarea
-            name="Message"
-            id="message"
-            placeholder="Your Message"
-          ></textarea>
-          <button class="contact-button">Send Message</button>
+          <textarea name="message" id="message" required></textarea>
+          <button type="submit" class="contact-button">Send Message</button>
         </form>
       </div>
     </section>
