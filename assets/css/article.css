@@ -1,0 +1,133 @@
+/* Reset basics */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Segoe UI", Arial, sans-serif;
+  line-height: 1.6;
+  color: #333;
+  background: #fafafa;
+}
+
+/* Hero Section Layout */
+#hero {
+  display: flex;
+  flex-direction: column;
+  gap: 5rem;
+  padding: 4rem;
+  justify-content: space-between;
+  width: 100%;
+}
+
+/* Main Article */
+.main-article {
+  flex: 7;
+  padding: 1.5rem;
+}
+
+.main-article .article-title {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+
+.main-article img {
+  width: 100%;
+  height: auto;
+  border-radius: 6px;
+  margin: 1rem 0;
+}
+
+.main-article .article-author {
+  font-size: 0.9rem;
+  color: #777;
+  margin-bottom: 0.5rem;
+}
+
+.main-article hr {
+  border: none;
+  border-top: 1px solid #eee;
+  margin: 1.5rem 0;
+}
+
+.article-content p {
+  margin-bottom: 1rem;
+  text-align: justify;
+}
+
+/* Sidebar Articles */
+.other-articles {
+  flex: 3;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.other-articles .article {
+  background: #fff;
+  border-radius: 6px;
+  overflow: hidden;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+  transition: transform 0.2s ease;
+}
+
+.articles-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 2rem;
+}
+
+.other-articles .article:hover {
+  transform: translateY(-3px);
+}
+
+.other-articles .article-top img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.other-articles .article-bottom {
+  padding: 1rem;
+}
+
+.other-articles h4 {
+  font-size: 0.9rem;
+  color: #777;
+  margin-bottom: 0.5rem;
+}
+
+.other-articles h2 {
+  font-size: 1.2rem;
+  margin-bottom: 0.5rem;
+}
+
+.other-articles h2 a {
+  text-decoration: none;
+  color: #222;
+  transition: color 0.2s ease;
+}
+
+.other-articles h2 a:hover {
+  color: #0077cc;
+}
+
+.other-articles p {
+  font-size: 0.95rem;
+  color: #555;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  #hero {
+    flex-direction: column;
+  }
+
+  .main-article,
+  .other-articles {
+    flex: 1;
+  }
+}

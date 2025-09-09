@@ -51,7 +51,6 @@
   }
 }
 
-
 .article {
   border-radius: 8px;
   overflow: hidden;
@@ -113,6 +112,26 @@
   font-size: 1.125rem;
   margin: 0 auto;
   line-height: 1.6;
+}
+
+.navigation {
+  margin: 4rem auto;
+  text-align: center;
+  color: #861c1c;
+  font-weight: 600;
+}
+
+.navigation button {
+  background: none;
+  border: none;
+  color: #861c1c;
+  font-size: 1rem;
+  cursor: pointer;
+  margin: 0 1rem;
+}
+
+.article a:hover {
+  text-decoration: underline;
 }
 
 @media (max-width: 768px) {
