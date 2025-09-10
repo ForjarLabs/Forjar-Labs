@@ -13,7 +13,7 @@ $url = "https://forjarlabs.agency/post.php?id=" . $postId;
 
 // Fetch post if valid ID
 if ($postId > 0) {
-    $stmt = $conn->prepare("SELECT title, content, image_path, excerpt FROM posts WHERE id = ?");
+    $stmt = $conn->prepare("SELECT title, content, image_path, excerpt FROM articles WHERE id = ?");
     $stmt->bind_param("i", $postId);
     $stmt->execute();
     $result = $stmt->get_result();

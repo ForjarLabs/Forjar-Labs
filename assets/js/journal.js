@@ -25,7 +25,7 @@ document.addEventListener("DOMContentLoaded", async function () {
           <div class="article-bottom">
             <h4>(${article.author})</h4>
             <h2><a href="/article.php?id=${article.id}" class="post-link">${article.title}</a></h2>
-            <p>${article.except}</p>
+            <p>${article.excerpt}</p>
           </div>
         </div>`;
     });
