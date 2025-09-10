@@ -17,7 +17,7 @@ document.addEventListener("DOMContentLoaded", () => {
         });
 
         const siteHeader = document.querySelector("#header");
-        const hero = document.querySelector("#hero");
+        const hero = document.querySelector("#hero") || document.querySelector("#post");
 
         if (hero && siteHeader) {
           const heroHeight = siteHeader.offsetHeight;

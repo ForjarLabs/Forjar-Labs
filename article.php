@@ -132,7 +132,7 @@ if ($postId > 0) {
 <div id="header-placeholder"></div>
 
     <!-- post -->
-    <section id="hero post">
+    <section id="post">
       <div class="post-container">
         <div class="article-header">
           <h2></h2>
