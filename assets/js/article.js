@@ -31,7 +31,7 @@ async function displayPost() {
       return;
     }
 
-    const post = data.post;
+    const post = data.article;
     const related = data.related;
 
     // Calculate reading time

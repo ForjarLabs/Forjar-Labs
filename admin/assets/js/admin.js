@@ -96,7 +96,7 @@ async function loadPosts(targetId = "postsList") {
 
     postsList.innerHTML = "";
 
-    for (const postData of data.posts) {
+    for (const postData of data.articles) {
       const data = postData;
 
       const coverImageUrl = "../assets/images/placeholder.jpg";
@@ -177,7 +177,7 @@ async function loadPosts(targetId = "postsList") {
             alert("Post not found");
           }
 
-          const postData = fetchedData.post;
+          const postData = fetchedData.article;
 
           document.getElementById("postTitle").value = postData.title || "";
           document.getElementById("author").textContent = postData.author || "";
