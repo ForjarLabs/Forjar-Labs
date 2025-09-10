@@ -40,7 +40,7 @@ document.addEventListener("DOMContentLoaded", async function () {
   try {
     const response = await fetch("/api/getPosts.php");
     const data = await response.json();
-    articles = data.data;
+    articles = data.articles;
 
     totalPages = Math.ceil(articles.length / articlesPerPage);
 
