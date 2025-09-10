@@ -1,52 +1,51 @@
-
 .article-header {
-    padding: 50px;
-    text-align: left;
+  padding: 50px;
+  text-align: left;
 }
 
 .post-image {
-    width: 100%;
+  width: 100%;
 }
 
 .post-body {
-    padding: 20px 100px
+  padding: 20px 100px;
 }
 
 .author div {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
 }
 
 .author span {
-    margin-left: 0;
+  margin-left: 0;
 }
 
 .post-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-bottom: 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 40px;
 }
 
 .category {
-    margin-bottom: 10px;
+  margin-bottom: 10px;
 }
 
 .post-share {
-    display: flex;
-    gap: 30px;
-    color: #1A1F3C;
-    margin: 60px auto;
-    width: 50%;
-    justify-content: center;
-    background-color: white;
-    padding: 20px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  display: flex;
+  gap: 30px;
+  color: #1a1f3c;
+  margin: 60px auto;
+  width: 50%;
+  justify-content: center;
+  background-color: white;
+  padding: 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
 #related-posts {
-    padding: 60px 20px 0;
+  padding: 60px 20px 0;
 }
 
 .related-grid {
@@ -57,12 +56,12 @@
 }
 
 .related-grid p {
-    margin: 0;
+  margin: 0;
 }
 
 .related-grid .category {
-    margin-top: 10px;
-    margin-bottom: 0;
+  margin-top: 10px;
+  margin-bottom: 0;
 }
 
 #postContent p {
@@ -129,7 +128,7 @@
 }
 
 .comment p {
-    margin: 0;
+  margin: 0;
 }
 
 .comment-avatar {
@@ -153,7 +152,6 @@
   cursor: pointer;
   margin: 1em 0;
 }
-
 
 .article {
   border-radius: 8px;
@@ -202,4 +200,14 @@
 
 .article a:hover {
   text-decoration: underline;
+}
+
+@media (max-width: 768px) {
+  .post-body {
+    padding: 20px 1.25rem;
+  }
+
+  .article-header {
+    padding: 20px 1.25rem;
+  }
 }
