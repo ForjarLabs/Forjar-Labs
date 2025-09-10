@@ -5,7 +5,7 @@ header("Content-Type: application/json");
 require "db.php"; // contains your DB connection
 
 // Fetch all articles (newest first by date)
-$sql = "SELECT id, image_path, date, title, author, excerpt, content 
+$sql = "SELECT *
         FROM articles 
         ORDER BY date DESC";
 

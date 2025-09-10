@@ -6,7 +6,7 @@ require "db.php"; // DB connection
 try {
     $drafts = [];
 
-    $sql = "SELECT id, title, author, excerpt, image_path, created_at, updated_at 
+    $sql = "SELECT *
             FROM drafts 
             ORDER BY created_at DESC";
     $result = $conn->query($sql);
