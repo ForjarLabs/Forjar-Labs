@@ -38,7 +38,7 @@ async function displayPost() {
     const plainText = stripHTML(post.plaintext || "");
     const words = plainText.split(/\s+/).length;
     const readTime = Math.ceil(words / 200);
-    const date = post.created_at
+    const date = post.date
       ? new Date(post.created_at).toDateString()
       : "Unknown";
 

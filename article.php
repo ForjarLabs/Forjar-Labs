@@ -132,7 +132,7 @@ if ($postId > 0) {
 <div id="header-placeholder"></div>
 
     <!-- post -->
-    <section id="post">
+    <section id="hero post">
       <div class="post-container">
         <div class="article-header">
           <h2></h2>
@@ -147,7 +147,6 @@ if ($postId > 0) {
           <hr />
           <div class="post-header">
             <div class="author">
-              <img src="../assets/images/author.jpg" alt="Author" />
               <div>
                 <span class="author-name"></span>
                 <div class="meta minutes"></div>
