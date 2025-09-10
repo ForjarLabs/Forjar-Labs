@@ -11,7 +11,7 @@ try {
     $id        = isset($_POST["id"]) ? intval($_POST["id"]) : null;
     $title     = trim($_POST["title"] ?? "");
     $content   = trim($_POST["content"] ?? "");
-    $category  = trim($_POST["category"] ?? "");
+    $author    = trim($_POST["author"]   ?? "");
     $excerpt   = trim($_POST["excerpt"] ?? "");
     $imagePath = trim($_POST["image"] ?? "");
 
@@ -21,14 +21,14 @@ try {
 
     $stmt = $conn->prepare("
         UPDATE drafts 
-        SET title = ?, content = ?, image_path = ?, category = ?, excerpt = ?, updated_at = NOW()
+        SET title = ?, content = ?, image_path = ?, author = ?, excerpt = ?, updated_at = NOW()
         WHERE id = ?
     ");
     if (!$stmt) {
         throw new Exception($conn->error);
     }
 
-    $stmt->bind_param("sssssi", $title, $content, $imagePath, $category, $excerpt, $id);
+    $stmt->bind_param("sssssi", $title, $content, $imagePath, $author, $excerpt, $id);
 
     if (!$stmt->execute()) {
         throw new Exception($stmt->error);

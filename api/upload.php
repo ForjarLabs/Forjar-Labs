@@ -1,32 +1,31 @@
 <?php
 // /api/upload.php
 header("Content-Type: application/json");
+require "db.php"; // ✅ assumes $conn is created here
 
-require "db.php"; // contains your DB connection
+try {
+    // Ensure uploads directory exists
+    $uploadDir = realpath(__DIR__ . "/../storage/uploads/");
+    if ($uploadDir === false) {
+        $uploadDir = __DIR__ . "/../storage/uploads/";
+        if (!is_dir($uploadDir)) {
+            mkdir($uploadDir, 0775, true);
+        }
+    }
 
-// Connect to MySQL
-$conn = new mysqli($host, $user, $pass, $db);
-if ($conn->connect_error) {
-    die(json_encode(["success" => false, "error" => "DB connection failed: " . $conn->connect_error]));
-}
+    if ($_SERVER["REQUEST_METHOD"] !== "POST") {
+        throw new Exception("Invalid request method");
+    }
 
-// Ensure uploads directory exists
-$uploadDir = __DIR__ . "/../storage/uploads/";
-if (!is_dir($uploadDir)) {
-    mkdir($uploadDir, 0775, true);
-}
-
-// Handle POST request
-if ($_SERVER["REQUEST_METHOD"] === "POST") {
-    $title     = $_POST["title"] ?? "";
-    $content   = $_POST["content"] ?? "";
+    $title     = trim($_POST["title"] ?? "");
+    $content   = trim($_POST["content"] ?? "");
     $plaintext = strip_tags($content);
-    $author    = $_POST["author"] ?? "";
-    $excerpt   = $_POST["excerpt"] ?? "";
-    $imagePath = $_POST["image"] ?? "";
-    $views     = 0; // default for new post
+    $author    = trim($_POST["author"] ?? "");
+    $excerpt   = trim($_POST["excerpt"] ?? "");
+    $imagePath = trim($_POST["image"] ?? "");
+    $views     = 0; // default for new article
 
-    // Insert into DB
+    // Prepare insert
     $stmt = $conn->prepare("
         INSERT INTO articles 
         (title, content, image_path, plaintext, author, excerpt, views, date)
@@ -34,21 +33,25 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
     ");
 
     if (!$stmt) {
-        echo json_encode(["success" => false, "error" => $conn->error]);
-        exit;
+        throw new Exception("Prepare failed: " . $conn->error);
     }
 
     $stmt->bind_param("ssssssi", $title, $content, $imagePath, $plaintext, $author, $excerpt, $views);
+    $stmt->execute();
 
-    if ($stmt->execute()) {
-        echo json_encode(["success" => true, "message" => "Article uploaded successfully", "id" => $stmt->insert_id]);
-    } else {
-        echo json_encode(["success" => false, "error" => $stmt->error]);
+    echo json_encode([
+        "success" => true,
+        "message" => "Article uploaded successfully",
+        "id"      => $stmt->insert_id
+    ]);
+} catch (Exception $e) {
+    echo json_encode([
+        "success" => false,
+        "error"   => $e->getMessage()
+    ]);
+} finally {
+    if (isset($stmt) && $stmt instanceof mysqli_stmt) {
+        $stmt->close();
     }
-
-    $stmt->close();
-} else {
-    echo json_encode(["success" => false, "error" => "Invalid request"]);
+    $conn->close();
 }
-
-$conn->close();
