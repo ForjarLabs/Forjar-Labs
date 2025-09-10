@@ -180,7 +180,7 @@ async function loadPosts(targetId = "postsList") {
           const postData = fetchedData.article;
 
           document.getElementById("postTitle").value = postData.title || "";
-          document.getElementById("author").textContent = postData.author || "";
+          document.getElementById("author").value = postData.author || "";
 
           const delta = quill.clipboard.convert(postData.content || "");
           quill.setContents(delta || []);
@@ -248,7 +248,7 @@ async function loadDrafts() {
 
       item.querySelector(".edit-draft").addEventListener("click", () => {
         document.getElementById("postTitle").value = data.title || "";
-        document.getElementById("author").textContent = data.author || "";
+        document.getElementById("author").value = data.author || "";
         const delta = quill.clipboard.convert(data.content || "");
         quill.setContents(delta || []);
 
