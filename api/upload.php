@@ -28,9 +28,9 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
 
     // Insert into DB
     $stmt = $conn->prepare("
-        INSERT INTO posts 
-        (title, content, image_path, plaintext, author, excerpt, views, created_at, updated_at)
-        VALUES (?, ?, ?, ?, ?, ?, ?, NOW(), NOW())
+        INSERT INTO articles 
+        (title, content, image_path, plaintext, author, excerpt, views, date)
+        VALUES (?, ?, ?, ?, ?, ?, ?, NOW())
     ");
 
     if (!$stmt) {
@@ -41,7 +41,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
     $stmt->bind_param("ssssssi", $title, $content, $imagePath, $plaintext, $author, $excerpt, $views);
 
     if ($stmt->execute()) {
-        echo json_encode(["success" => true, "message" => "Post uploaded successfully", "id" => $stmt->insert_id]);
+        echo json_encode(["success" => true, "message" => "Article uploaded successfully", "id" => $stmt->insert_id]);
     } else {
         echo json_encode(["success" => false, "error" => $stmt->error]);
     }

@@ -544,7 +544,6 @@ async function saveDraft() {
     // Append form fields
     formData.append("title", title);
     formData.append("content", content);
-    formData.append("category", categories);
     formData.append("excerpt", excerpt);
     formData.append("image", imageUrl);
     formData.append("author", author);
