@@ -1,8 +1,3 @@
-import {
-  getAuth,
-  onAuthStateChanged,
-} from "https://www.gstatic.com/firebasejs/10.14.1/firebase-auth.js";
-
 // Helper function to strip HTML
 function stripHTML(html) {
   let doc = new DOMParser().parseFromString(html, "text/html");
@@ -10,60 +5,9 @@ function stripHTML(html) {
 }
 
 // Initialize global variables
-let isAuthenticated = false;
+let isAuthenticated = true;
 let myChart = null;
 let quill = null;
-
-// Initialize Firebase with fallback
-async function initializeFirebase() {
-  if (
-    window.firebase &&
-    window.firebase.auth &&
-    window.firebase.db &&
-    window.firebase.storage
-  ) {
-    console.log("Using existing Firebase instance");
-    return window.firebase;
-  }
-
-  console.warn("Falling back to dynamic Firebase initialization...");
-  try {
-    const firebaseApp = await import(
-      "https://www.gstatic.com/firebasejs/10.12.0/firebase-app.js"
-    );
-    const firebaseAuth = await import(
-      "https://www.gstatic.com/firebasejs/10.12.0/firebase-auth.js"
-    );
-    const firebaseFirestore = await import(
-      "https://www.gstatic.com/firebasejs/10.12.0/firebase-firestore.js"
-    );
-    const firebaseStorage = await import(
-      "https://www.gstatic.com/firebasejs/10.12.0/firebase-storage.js"
-    );
-
-    const firebaseConfig = {
-      apiKey: "AIzaSyAFzd1txu8pLl4gjFQJzEevvSvb0RU0Naw",
-      authDomain: "innocentojefia.firebaseapp.com",
-      projectId: "innocentojefia",
-      storageBucket: "innocentojefia.firebasestorage.app",
-      messagingSenderId: "899686323057",
-      appId: "1:899686323057:web:0f70d8a3b4ec187c3d5cd0",
-      measurementId: "G-ZKLDDSDNVS",
-    };
-    const app = firebaseApp.initializeApp(firebaseConfig);
-    const auth = firebaseAuth.getAuth(app);
-    const db = firebaseFirestore.getFirestore(app);
-    const storage = firebaseStorage.getStorage(app);
-    window.firebase = { auth, db, storage };
-    console.log("Firebase initialized via fallback");
-    return window.firebase;
-  } catch (error) {
-    console.error("Failed to initialize Firebase dynamically:", error);
-    throw new Error(
-      "Firebase initialization failed. Check network or Firebase SDK."
-    );
-  }
-}
 
 // Login Function
 async function login() {
@@ -171,9 +115,6 @@ async function loadPosts(targetId = "postsList") {
       const excerpt = data.excerpt || plainText.substring(0, 100) + "...";
       const authorImage = data.authorImage || "../assets/images/author.jpg";
       const authorName = data.author || "Unknown Author";
-      const category = Array.isArray(data.category)
-        ? data.category.join(", ")
-        : data.category || "Uncategorized";
 
       const postCard = document.createElement("div");
       postCard.className = "post-card";
@@ -182,12 +123,10 @@ async function loadPosts(targetId = "postsList") {
       postCard.innerHTML = `
         <img src="${data.image_path}" alt="${title}" onerror="this.src='${coverImageUrl}';">
         <div class="post-content">
-          <div class="category">${category}</div>
-          <h3><a href="/post.php?id=${data.id}" class="post-link">${title}</a></h3>
+          <h3><a href="/article.php?id=${data.id}" class="post-link">${title}</a></h3>
           <div class="meta">Posted on ${date} • ${readTime} min read</div>
           <p>${excerpt}</p>
           <div class="author">
-            <img src="${authorImage}" alt="Author Image" onerror="this.src='${coverImageUrl}';">
             <span>${authorName}</span>
           </div>
           <h5> ${data.views} views </h5>
@@ -241,10 +180,7 @@ async function loadPosts(targetId = "postsList") {
           const postData = fetchedData.post;
 
           document.getElementById("postTitle").value = postData.title || "";
-          document.getElementById("selectedCategories").textContent =
-            Array.isArray(postData.category)
-              ? postData.category.join(", ")
-              : postData.category || "";
+          document.getElementById("author").textContent = postData.author || "";
 
           const delta = quill.clipboard.convert(postData.content || "");
           quill.setContents(delta || []);
@@ -289,6 +225,7 @@ async function loadDrafts() {
       const data = draft;
       const item = document.createElement("div");
       item.className = "post-card";
+      const authorName = draft.author || "Unknown Author";
       item.style.display = "block";
       item.innerHTML = ` 
 
@@ -296,9 +233,11 @@ async function loadDrafts() {
         data.title || "No tiltle"
       }" onerror="this.src='${coverImageUrl}';">
         <div class="post-content">
-          <div class="category">${data.category || "No Category"}</div>
           <h3>${data.title || "Untitled Draft"}</h3>
           <p>${data.excerpt || "No excerpt"}</p>
+          <div class="author">
+            <span>${authorName}</span>
+          </div>
           <div class="post-actions">
              <button data-id="${draft.id}" class="edit-draft">Edit</button>
               <button data-id="${draft.id}" class="delete-draft">Delete</button>
@@ -309,11 +248,7 @@ async function loadDrafts() {
 
       item.querySelector(".edit-draft").addEventListener("click", () => {
         document.getElementById("postTitle").value = data.title || "";
-        document.getElementById("selectedCategories").textContent =
-          Array.isArray(data.category)
-            ? data.category.join(", ")
-            : data.category || "";
-
+        document.getElementById("author").textContent = data.author || "";
         const delta = quill.clipboard.convert(data.content || "");
         quill.setContents(delta || []);
 
@@ -368,19 +303,19 @@ async function fetchMetrics() {
       if (views > mostViewed.views) {
         mostViewed = { title: data.title || "Untitled", views };
       }
-      try {
-        const { db } = await initializeFirebase();
-        const { collection, query, where, getDocs } = await import(
-          "https://www.gstatic.com/firebasejs/10.12.0/firebase-firestore.js"
-        );
-        const commentsRef = collection(db, "comments");
-        const q = query(commentsRef, where("postId", "==", doc.id));
-        const commentsSnapshot = await getDocs(q);
+      // try {
+      //   const { db } = await initializeFirebase();
+      //   const { collection, query, where, getDocs } = await import(
+      //     "https://www.gstatic.com/firebasejs/10.12.0/firebase-firestore.js"
+      //   );
+      //   const commentsRef = collection(db, "comments");
+      //   const q = query(commentsRef, where("postId", "==", doc.id));
+      //   const commentsSnapshot = await getDocs(q);
 
-        totalComments += commentsSnapshot.size;
-      } catch (err) {
-        console.warn(`Couldn't count comments for ${doc.id}:`, err.message);
-      }
+      //   totalComments += commentsSnapshot.size;
+      // } catch (err) {
+      //   console.warn(`Couldn't count comments for ${doc.id}:`, err.message);
+      // }
     }
 
     document.getElementById("totalPosts").textContent = data.posts.length;
@@ -493,9 +428,7 @@ async function publishPost() {
   if (!isAuthenticated) return;
 
   const title = document.getElementById("postTitle").value.trim();
-  const categories = [
-    ...document.getElementById("selectedCategories").textContent.split(", "),
-  ].filter(Boolean);
+  const author = document.getElementById("author").value.trim();
   const plainText = quill.getText().trim().substring(0, 100) + "...";
   const excerpt = quill.getText().trim().substring(0, 150) + "...";
   const content = document.querySelector("#editor .ql-editor").innerHTML.trim();
@@ -514,18 +447,20 @@ async function publishPost() {
     alert("Please upload a valid image.");
     return;
   }
+  if (!author) {
+    alert("Please enter the author's name.");
+    return;
+  }
 
   const formData = new FormData();
 
   // Append form fields
   formData.append("title", title);
   formData.append("content", content);
-  formData.append("category", categories);
   formData.append("plaintext", plainText);
-  formData.append("author", "Innocent Ojefia");
+  formData.append("author", author);
   formData.append("excerpt", excerpt);
   formData.append("image", imageUrl);
-  formData.append("authorImagePath", "/assets/images/author.jpg");
 
   try {
     if (window.editingPostId) {
@@ -575,7 +510,7 @@ async function publishPost() {
     // Reset form
     document.getElementById("postTitle").value = "";
     document.getElementById("coverImage").value = "";
-    document.getElementById("selectedCategories").textContent = "";
+    document.getElementById("author").value = "";
     document.getElementById("preview").src = "../assets/images/placeholder.jpg";
     quill.setContents([]);
 
@@ -591,13 +526,7 @@ async function saveDraft() {
   if (!isAuthenticated) return;
 
   const title = document.getElementById("postTitle").value.trim();
-  const selectedCategoriesText =
-    document.getElementById("selectedCategories").textContent;
-  const categories = selectedCategoriesText
-    .split(",")
-    .map((cat) => cat.trim())
-    .filter(Boolean);
-
+  const author = document.getElementById("author").value.trim();
   const content = document.querySelector("#editor .ql-editor").innerHTML.trim();
   const plainText = quill.getText().trim();
   const excerpt =
@@ -618,6 +547,7 @@ async function saveDraft() {
     formData.append("category", categories);
     formData.append("excerpt", excerpt);
     formData.append("image", imageUrl);
+    formData.append("author", author);
 
     // Decide which endpoint to call
     const endpoint = window.editingDraftId
@@ -645,7 +575,7 @@ async function saveDraft() {
 
     // Reset form
     document.getElementById("postTitle").value = "";
-    document.getElementById("selectedCategories").textContent = "";
+    document.getElementById("author").value = "";
     document.getElementById("coverImage").value = "";
     document.getElementById("preview").src = "../assets/images/placeholder.jpg";
     quill.setContents([]);
@@ -665,8 +595,6 @@ document.addEventListener("DOMContentLoaded", async () => {
   // Show active tab content
   document.querySelector(".tab-content.active").style.display = "block";
   try {
-    // Ensure Firebase is initialized first
-    const { auth } = await initializeFirebase();
     // Initialize UI components
     initializeQuill();
     setupTabs();
@@ -678,26 +606,6 @@ document.addEventListener("DOMContentLoaded", async () => {
       .getElementById("publishPost")
       .addEventListener("click", publishPost);
     document.getElementById("saveDraft").addEventListener("click", saveDraft);
-
-    // Category selection
-    document.querySelector(".category-toggle").addEventListener("click", () => {
-      document.querySelector(".category-menu").classList.toggle("show");
-    });
-
-    const selectedCategories = new Set();
-    document.querySelectorAll(".category-menu li").forEach((item) => {
-      item.addEventListener("click", () => {
-        const value = item.dataset.value;
-        if (selectedCategories.has(value)) {
-          selectedCategories.delete(value);
-        } else if (selectedCategories.size < 3) {
-          selectedCategories.add(value);
-        }
-        document.getElementById("selectedCategories").textContent = [
-          ...selectedCategories,
-        ].join(", ");
-      });
-    });
 
     // onAuthStateChanged(auth, async (user) => {
     //   if (user) {

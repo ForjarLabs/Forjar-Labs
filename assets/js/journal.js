@@ -24,7 +24,7 @@ document.addEventListener("DOMContentLoaded", async function () {
           </div>
           <div class="article-bottom">
             <h4>(${article.author})</h4>
-            <h2><a href="/article">${article.title}</a></h2>
+            <h2><a href="/article.php?id=${article.id}" class="post-link">${article.title}</a></h2>
             <p>${article.except}</p>
           </div>
         </div>`;
@@ -38,7 +38,7 @@ document.addEventListener("DOMContentLoaded", async function () {
   }
 
   try {
-    const response = await fetch("/assets/js/test.json");
+    const response = await fetch("/api/getPosts.php");
     const data = await response.json();
     articles = data.data;
 
