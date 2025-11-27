@@ -2,14 +2,19 @@
 <html lang="en">
   <head>
     <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-5SJ6WTTPN7"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=G-5SJ6WTTPN7"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
 
-  gtag('config', 'G-5SJ6WTTPN7');
-</script>
+      gtag("config", "G-5SJ6WTTPN7");
+    </script>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -67,6 +72,15 @@
       rel="stylesheet"
     />
 
+    <link
+      href="https://fonts.googleapis.com/css2?family=Urbanist:wght@300;400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Caveat:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
     <!-- External CSS -->
     <link rel="stylesheet" href="/assets/css/style.css" />
     <link rel="stylesheet" href="/assets/css/index.css" />
@@ -79,208 +93,1035 @@
   </head>
 
   <body>
-    <div id="header-placeholder"></div>
+    <header>
+      <div class="top-most">
+        <h3>
+          ⚡ November slots 40% full. Next start date: Dec 08 →
+          <a href="">Book Now</a>
+        </h3>
+      </div>
+      <div class="container header-inner">
+        <div class="brand">
+          <img src="/assets/images/Logo.png" alt="logo img" />
+          <div>
+            <div style="font-weight: 800">Forjar Labs</div>
+            <div style="font-size: 12px; color: var(--muted)">
+              Design · Build · Scale
+            </div>
+          </div>
+        </div>
 
-    <section id="hero">
-      <h1>We Build Products That Win.<br> And Help Others Do the Same.</h1>
-      <p>
-        Forjar Labs is a product and innovation studio crafting original games,
-        software, and systems and helping teams sharpen theirs.
-      </p>
-      <h4>Strategy-led, Execution-obsessed.</h4>
-      <div class="explore">
-        <a href="https://services.forjarlabs.agency/"
-          ><span class="tilt-45degree">&#8593</span>Explore What We’re
-          Building</a
+        <nav aria-label="Primary navigation">
+          <a href="#work" class="active">Work</a>
+          <a href="#services">Services</a>
+          <a href="#faq">Products</a>
+          <a href="#pricing">Pricing</a>
+        </nav>
+
+        <a class="cta" href="#contact">Work with us</a>
+
+        <div class="mobile-nav" aria-label="Primary navigation">
+          <a href="#work" class="active">Work</a>
+          <a href="#services">Services</a>
+          <a href="#faq">Products</a>
+          <a href="#pricing">Pricing</a>
+          <a class="cta" href="#contact">Work with us</a>
+        </div>
+
+        <button
+          class="menu-btn"
+          aria-expanded="false"
+          aria-controls="mobile-nav"
         >
-        <a href="https://services.forjarlabs.agency/"><span class="tilt-45degree">&#8593</span>Work With Us</a>
+          ☰
+        </button>
       </div>
-      <div class="hero-images-row">
-        <div>
+    </header>
 
-            <img src="/assets/images/hero1.png" alt="Hero Image 1" />
+    <main class="container">
+      <section class="hero">
+        <div class="hero-grid">
+          <div>
+            <span class="eyebrow"
+              ><img src="/assets/images/diamond.png" alt="diamond icon" />$5M+
+              Generated • 200+ Businesses Transformed • 1 World-Class Team</span
+            >
+            <h1>
+              We Build Revenue Systems for SaaS, Fintech, and E-Commerce
+              Founders Who Are Done Waiting
+            </h1>
+            <p class="lead">
+              Full product builds, conversion funnels, and growth systems —
+              engineered to generate revenue, not just applause. From idea →
+              strategy → design → dev → launch → scale. All in-house.
+            </p>
+
+            <div
+              style="
+                display: flex;
+                gap: 12px;
+                align-items: center;
+                margin-top: 10px;
+              "
+            >
+              <a
+                class="cta"
+                href="#contact"
+                style="
+                  display: flex;
+                  gap: 5px;
+                  align-items: center;
+                  background: transparent;
+                  border: 1px solid #0a0e14;
+                  border-radius: 100px;
+                "
+                ><img
+                  src="/assets/images/Whatsapp.png"
+                  alt="whatsapp-icon"
+                  style="width: 25px; height: 25px"
+                />
+                Message Us</a
+              >
+              <a
+                href="#work"
+                class="cta"
+                style="
+                  display: flex;
+                  gap: 5px;
+                  align-items: center;
+                  border: 1px solid #0a0e14;
+                  border-radius: 100px;
+                "
+                ><img
+                  src="/assets/images/calendar-tick.svg"
+                  alt="calender icon"
+                  style="width: 25px; height: 25px"
+                />
+                Book your intro call →</a
+              >
+            </div>
+
+            <div class="trust-board">
+              <h6>TRUSTED BY THE FAST GROWING STARTUPS:</h6>
+              <div class="brands">
+                <div>
+                  <h4>LD PHOTOS</h4>
+                  <h4>PLPG</h4>
+                  <h4>KPRINTS</h4>
+                  <h4>STACKWIRE</h4>
+                  <h4>HALO4NGELS</h4>
+                  <h4>SUBTRACK</h4>
+                  <h4>K.N.E</h4>
+                  <h4>LEDYR</h4>
+                  <h4>TOBOVENTURES</h4>
+                </div>
+
+                <div>
+                  <h4>GOLDENSTATEGRP</h4>
+                  <h4>JHSPORTS</h4>
+                  <h4>KOLLEKTIV</h4>
+                  <h4>OMOOKOROHGRP</h4>
+                  <h4>OGME</h4>
+                  <h4>OASISFOOD</h4>
+                  <h4>ROYALSTAYSCAPE</h4>
+                </div>
+              </div>
+            </div>
+
+            <div class="hero-stats" aria-hidden>
+              <div class="stat">
+                <strong>$5M+</strong
+                ><small style="color: var(--muted)">Revenue Generated</small>
+              </div>
+              <div class="stat">
+                <strong>200+</strong
+                ><small style="color: var(--muted)">Business Transformed</small>
+              </div>
+              <div class="stat">
+                <strong>87%</strong
+                ><small style="color: var(--muted)">AVG Conversion Lift</small>
+              </div>
+              <div class="stat">
+                <strong>3.2x</strong
+                ><small style="color: var(--muted)">AVG ROI</small>
+              </div>
+            </div>
+          </div>
+
+          <!-- <div class="hero-visual" role="img" aria-label="Site preview image"> -->
+          <!-- local image path (will be transformed by the environment) -->
+          <!-- <img src="/mnt/data/HomeScreen.png" alt="Home screen preview" />
+          </div> -->
         </div>
-        <div>
+      </section>
 
-            <img src="/assets/images/hero2.png" alt="Hero Image 2" />
-        </div>
-      </div>
-    </section>
-
-    <section id="statistics">
-      <h4>statistics</h4>
-      <div class="stats-row">
-      <div class="stat-column">
-        <h1>3<span class="superscript">+</span></h1>
-        <p>Years of Experience</p>
-      </div>
-      <div class="stat-column">
-        <h1>98<span class="superscript">%</span></h1>
-        <p>Satisfaction Rate</p>
-      </div>
-      <div class="stat-column">
-        <h1>50<span class="superscript">+</span></h1>
-        <p>Clients Served</p>
-      </div>
-      <div class="stat-column">
-        <h1>70<span class="superscript">%</span></h1>
-        <p>Repeat Clients</p>
-      </div>
-      <div class="stat-column">
-        <h1>7M<span class="superscript">+</span></h1>
-        <p>Users Impacted</p>
-      </div>
-      <div class="stat-column">
-        <h1>20<span class="superscript">+</span></h1>
-        <p>Products Touched</p>
-      </div>
-      <div class="stat-column">
-        <h1>5<span class="superscript">Days</span></h1>
-        <p>To First Prototype</p>
-      </div>
-      </div>
-    </section>
-
-    <section id="products">
-      <h4 class="section-heading">OUR PRODUCTS</h4>
-      <div class="products-top">
-        <div class="products-top-left">
-          <h1>Original Tools.<br> Thoughtful Games. Built from Scratch.</h1>
+      <section class="features" id="services">
+        <div class="process-heading">
+          <h2>
+            We treat every project like a profit engine, not a portfolio piece.
+          </h2>
           <p>
-            Every product we make solves a problem or moves a culture forward.
-            From solo productivity tools to narrative-driven games, our builds
-            reflect what we value: clarity, craft, and real use.
+            From full-stack product development. SaaS platforms, e-commerce
+            systems, MVPs, conversion funnels, and internal tools. Everything
+            engineered for one outcome: more money in your account.
           </p>
         </div>
-        <div class="products-top-right">
-        <button><a href="/products/">See Our Products</a></button>
-        </div>
-      </div>
-      <div class="product-bottom">
-        <img src="/assets/images/products1.png" alt="products image 1" />
-        <img src="/assets/images/product2.png" alt="products image 2" />
-        <img src="/assets/images/product3.png" alt="products image 3" />
-      </div>
-    </section>
 
-    <section id="services">
-      <h4 class="section-heading">OUR SERVICES</h4>
-      <h1>When Teams Need Focus,They Call Us In.</h1>
+        <div class="cards-grid">
+          <div class="card">
+            <div class="images">
+              <img
+                src="/assets/images/brand-identity1.png"
+                alt="brand identity"
+                style="position: absolute; top: -110%; z-index: 100"
+              />
+              <img
+                src="/assets/images/brand-identity2.png"
+                alt="brand identity"
+                style="position: absolute; top: -80%; right: 20px"
+              />
+            </div>
+            <h6>Brand Identity & Strategy</h6>
+            <p class="muted">
+              Your core defined, your edge sharpened. Positioning, voice, and
+              visuals that make your brand unmistakable.
+            </p>
+          </div>
+          <div class="card">
+            <div class="images">
+              <img
+                src="/assets/images/design.png"
+                alt="wesite design"
+                style="position: absolute; top: -80%"
+              />
+            </div>
+            <h6>Website Design & Development</h6>
+            <p class="muted">
+              Conversion-driven sites, landing pages, and funnels. Clear
+              structure, clear flow, and an intentional path that pushes users
+              down to action.
+            </p>
+          </div>
+          <div class="card">
+            <div class="images">
+              <img
+                src="/assets/images/mvp1.png"
+                alt="mvp image"
+                style="position: absolute; top: -100%; right: 30%; z-index: 300"
+              />
+              <img
+                src="/assets/images/mvp2.png"
+                alt="mvp image"
+                style="position: absolute; top: -110%; right: 10%; z-index: 200"
+              />
+              <img
+                src="/assets/images/mvp3.png"
+                alt="mvp image"
+                style="
+                  position: absolute;
+                  top: -100%;
+                  right: -10%;
+                  z-index: 100;
+                "
+              />
+            </div>
+            <h6>MVPs & Product Development</h6>
+            <p class="muted">
+              From raw idea to a functional product. We turn concepts into
+              working SaaS, apps, and MVPs built for validation and revenue.
+            </p>
+          </div>
+          <div class="card">
+            <div class="images">
+              <img
+                src="/assets/images/custom1.png"
+                alt="custom identity"
+                style="position: absolute; top: -80%; right: 0; z-index: 100"
+              />
+              <img
+                src="/assets/images/custom2.png"
+                alt="custom identity"
+                style="position: absolute; top: -100%; left: -10%"
+              />
+            </div>
+            <h6>Custom Software Development</h6>
+            <p class="muted">
+              APIs, internal tools, automation — all engineered to remove
+              bottlenecks and tighten your operations.
+            </p>
+          </div>
+          <div class="card">
+            <div class="images">
+              <img
+                src="/assets/images/ai.png"
+                alt="ai engineering"
+                style="position: absolute; top: -80%; right: -5%"
+              />
+            </div>
+            <h6>AI Engineering & Integration</h6>
+            <p class="muted">
+              AI features that actually move revenue: smart workflows,
+              recommendation systems, predictive tools, and automated decision
+              points.
+            </p>
+          </div>
+          <div class="card">
+            <div class="images">
+              <img
+                src="/assets/images/growth1.png"
+                alt="custom identity"
+                style="position: absolute; top: -80%; left: 0; z-index: 100"
+              />
+              <img
+                src="/assets/images/growth2.png"
+                alt="custom identity"
+                style="position: absolute; top: -100%; right: -10%"
+              />
+            </div>
+            <h6>Growth & Optimization</h6>
+            <p class="muted">
+              Continuous testing, iteration, and performance tuning. Small
+              experiments that compound into serious growth.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section class="process">
+        <div class="process-heading">
+          <h2>How does it work?</h2>
+          <p>
+            Every project is engineered for one outcome: more money in your
+            account. Here's what that looks like.
+          </p>
+        </div>
+        <div class="steps">
+          <div class="step">
+            <strong>1. Discovery Call</strong>
+
+            <p class="muted">
+              We dig into your vision, the market gap, and what's technically
+              possible — so we're aligned from day one.
+            </p>
+            <img src="/assets/images/discovery.png" alt="discovery image" />
+          </div>
+          <div class="step">
+            <strong>2. Strategic Blueprint</strong>
+
+            <p class="muted">
+              We map out the product architecture, define the core features,
+              plan the tech stack, and lock the delivery timeline.
+            </p>
+            <img src="/assets/images/strategy.png" alt="strategy image" />
+          </div>
+          <div class="step">
+            <strong>3. Rapid Build & Launch</strong>
+            <p class="muted">
+              We build fast, iterate with you, ship the MVP, and guide your
+              early traction and growth.
+            </p>
+            <img src="/assets/images/launch.png" alt="launch image" />
+          </div>
+        </div>
+        <div class="end-text">
+          <p>
+            We handle UX, engineering, infrastructure, and go-to-market. You get
+            a profit-ready product, not a prototype.
+          </p>
+        </div>
+      </section>
+
+      <section class="why">
+        <div class="process-heading">
+          <h2>Why Serious Operators Choose ForjarLabs</h2>
+          <p>
+            We combine both process and agility flawlessly. by building
+            end-to-end products, fast execution, and design that scales—without
+            compromise.
+          </p>
+        </div>
+        <div style="overflow: auto; margin-top: 16px">
+          <table>
+            <thead>
+              <tr>
+                <th>Feature</th>
+                <th>Forjar Labs</th>
+                <th>Freelancers</th>
+                <th>Other Agencies</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Full Product Systems</td>
+                <td>
+                  ✅ Complete solutions: web, apps, MVPs, and integrations
+                </td>
+                <td>⚠️ Limited to small tasks</td>
+                <td>⚠️ Standard packages, rigid scope</td>
+              </tr>
+              <tr>
+                <td>Speed & Agility</td>
+                <td>✅ Rapid iteration without sacrificing quality</td>
+                <td>⚠️ Slow, dependent on one person</td>
+                <td>⚠️ Bureaucratic and rigid</td>
+              </tr>
+              <tr>
+                <td>Design That Scales</td>
+                <td>✅ Modern, responsive, future-ready UX/UI</td>
+                <td>⚠️ Quality inconsistent</td>
+                <td>⚠️ Templates or generic layouts</td>
+              </tr>
+              <tr>
+                <td>Ongoing Support</td>
+                <td>✅ 24/7 maintenance and updates</td>
+                <td>❌ Rarely available</td>
+                <td>⚠️ Expensive or minimal</td>
+              </tr>
+              <tr>
+                <td>Custom Integrations</td>
+                <td>✅ Seamless APIs, e-commerce, SaaS, automation</td>
+                <td>❌ Usually impossible</td>
+                <td>⚠️ Extra cost, slow delivery</td>
+              </tr>
+              <tr>
+                <td>Full Product Systems</td>
+                <td>✅ Growth insights, UX & tech strategy included</td>
+                <td>❌ None</td>
+                <td>⚠️ Mostly execution, minimal advice</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="end-text">
+          <p>
+            Whether you're a startup, growing business, or an established brand,
+            we're the team that bridges creativity, technology, and
+            speed—without compromise.
+          </p>
+        </div>
+      </section>
+
+      <section class="portfolio" id="work">
+        <div class="process-heading">
+          <h2>The Receipts</h2>
+          <p>
+            See how we transform client ideas into end-to-end products with
+            measurable results, combining design and technology that perform,
+            scale, and impress.
+          </p>
+        </div>
+        <div class="portfolio-grid" style="margin-top: 14px">
+          <div class="placeholder">
+            <a href=""
+              ><img src="assets/images/receipt1.png" alt="porfolio image"
+            /></a>
+          </div>
+          <div class="placeholder">
+            <a href=""
+              ><img src="assets/images/receipt2.png" alt="porfolio image"
+            /></a>
+          </div>
+          <div class="placeholder">
+            <a href=""
+              ><img src="assets/images/receipt3.png" alt="porfolio image"
+            /></a>
+          </div>
+          <div class="placeholder">
+            <a href=""
+              ><img src="assets/images/receipt4.png" alt="porfolio image"
+            /></a>
+          </div>
+          <div class="placeholder">
+            <a href=""
+              ><img src="assets/images/receipt5.png" alt="porfolio image"
+            /></a>
+          </div>
+          <div class="placeholder">
+            <a href=""
+              ><img src="assets/images/receipt6.png" alt="porfolio image"
+            /></a>
+          </div>
+        </div>
+      </section>
+
+      <section class="team">
+        <div class="process-heading">
+          <h2>The Builders We Forge With</h2>
+          <p>
+            Not another faceless agency. Every product we build comes straight
+            from the minds you see here — a lean team of builders behind the
+            execution.
+          </p>
+        </div>
+        <div class="members">
+          <div class="member">
+            <div class="member-left">
+              <img src="/assets/images/goodness.png" alt="member image" />
+            </div>
+            <div class="member-right">
+              <h4>GOODNESS</h4>
+              <h5 class="role">Creative Director</h5>
+              <h5>
+                Vision, strategy, UX/UI design, branding, product oversight
+              </h5>
+            </div>
+          </div>
+          <div class="member">
+            <div class="member-left">
+              <img src="/assets/images/akpos.jpg" alt="member image" />
+            </div>
+            <div class="member-right">
+              <h4>AKPOMENA</h4>
+              <h5 class="role">Lead Engineer</h5>
+              <h5>
+                Oversees technical strategy, architecture, devops, security,
+                scalable systems.
+              </h5>
+            </div>
+          </div>
+          <div class="member">
+            <div class="member-left">
+              <img src="/assets/images/funke.png" alt="member image" />
+            </div>
+            <div class="member-right">
+              <h4>FUNKE</h4>
+              <h5 class="role">Flutter Developer</h5>
+              <h5>
+                Cross-platform mobile apps, prototypes, performance optimization
+              </h5>
+            </div>
+          </div>
+          <div class="member">
+            <div class="member-left">
+              <img src="/assets/images/mercy.png" alt="member image" />
+            </div>
+            <div class="member-right">
+              <h4>MERCY</h4>
+              <h5 class="role">Product Manager</h5>
+              <h5>Project delivery, scope management, client liaison</h5>
+            </div>
+          </div>
+          <div class="member">
+            <div class="member-left">
+              <img src="/assets/images/samuel.png" alt="member image" />
+            </div>
+            <div class="member-right">
+              <h4>SAMUEL</h4>
+              <h5 class="role">Product Designer</h5>
+              <h5>
+                Vision, strategy, UX/UI design, branding, product oversight
+              </h5>
+            </div>
+          </div>
+          <div class="member">
+            <div class="member-left">
+              <img src="/assets/images/chukwuji.png" alt="member image" />
+            </div>
+            <div class="member-right">
+              <h4>CHUKWUJI</h4>
+              <h5 class="role">Full Stack Engineer</h5>
+              <h5>
+                Web applications, APIs, databases, integrations, and end to end
+                development
+              </h5>
+            </div>
+          </div>
+          <div class="member">
+            <div class="member-left">
+              <img src="/assets/images/adaobi.png" alt="member image" />
+            </div>
+            <div class="member-right">
+              <h4>ADAOBI</h4>
+              <h5 class="role">Web Developer</h5>
+              <h5>
+                Frontend web interfaces, responsive design, integration with
+                backend systems
+              </h5>
+            </div>
+          </div>
+          <div class="member">
+            <div class="member-left">
+              <img src="/assets/images/armstrong.png" alt="member image" />
+            </div>
+            <div class="member-right">
+              <h4>ARMSTRONG</h4>
+              <h5 class="role">Artist / Motion & Graphic Designer</h5>
+              <h5>
+                Illustrations, motion graphics, animations, branding assets
+              </h5>
+            </div>
+          </div>
+          <div class="member">
+            <div class="member-left">
+              <img src="/assets/images/nwakwo.png" alt="member image" />
+            </div>
+            <div class="member-right">
+              <h4>NWAKWO</h4>
+              <h5 class="role">Research Analyst</h5>
+              <h5>
+                Market research, user research, competitor analysis, product
+                insights
+              </h5>
+            </div>
+          </div>
+          <div class="member">
+            <div class="member-left">
+              <img src="/assets/images/tofunmi.png" alt="member image" />
+            </div>
+            <div class="member-right">
+              <h4>TOFUNMI</h4>
+              <h5 class="role">AI Researcher / Implementer</h5>
+              <h5>
+                Build custom AI features, integrate AI into products, automation
+                & predictive tools
+              </h5>
+            </div>
+          </div>
+          <div class="member">
+            <div class="member-left">
+              <img src="/assets/images/ifeanyi.png" alt="member image" />
+            </div>
+            <div class="member-right">
+              <h4>IFEANYI</h4>
+              <h5 class="role">QA & Operations</h5>
+              <h5>Testing, process management, internal systems</h5>
+            </div>
+          </div>
+          <div class="member">
+            <div class="member-left">
+              <img src="/assets/images/david.png" alt="member image" />
+            </div>
+            <div class="member-right">
+              <h4>DAVID</h4>
+              <h5 class="role">Product Designer</h5>
+              <h5>Process optimization, internal tools, workflow systems</h5>
+            </div>
+          </div>
+          <div class="member">
+            <div class="member-left">
+              <img src="/assets/images/favour.png" alt="member image" />
+            </div>
+            <div class="member-right">
+              <h4>FAVOUR</h4>
+              <h5 class="role">Web3 Advisor</h5>
+              <h5>
+                Blockchain strategy, NFT/product tokenization, crypto
+                integrations
+              </h5>
+            </div>
+          </div>
+          <div class="member">
+            <div class="member-left">
+              <img src="/assets/images/jeremy.png" alt="member image" />
+            </div>
+            <div class="member-right">
+              <h4>JEREMY</h4>
+              <h5 class="role">Growth & Business Advisor</h5>
+              <h5>
+                Advises on business growth, client scaling, market strategy, and
+                revenue expansion.
+              </h5>
+            </div>
+          </div>
+          <div class="member">
+            <div class="member-left">
+              <a href=""><div class="apply-button">+</div></a>
+            </div>
+            <div class="member-right">
+              <h4>YOU?</h4>
+              <h5 class="role">Apply Here!!</h5>
+            </div>
+          </div>
+        </div>
+
+        <div class="location">
+          <h3>Based in Lagos, Nigeria</h3>
+          <img src="/assets/images/lagos.png" alt="lagos image" />
+        </div>
+      </section>
+
+      <section class="pricing-section" id="pricing">
+        <div class="process-heading">
+          <h1>Simple, Transparent Pricing</h1>
+          <p class="subtitle">
+            Whether you're a startup, growing business, or established brand,
+            our plans give you access to end-to-end product design, development,
+            and strategy — no hidden fees, just clear value.
+          </p>
+        </div>
+
+        <div class="pricing-container">
+          <div class="card pricing-card">
+            <div class="card-icon pricing-icon">
+              <img src="/assets/images/launch_package.png" alt="package icon" />
+            </div>
+            <h2>LAUNCH PACKAGE</h2>
+            <p class="text-light">
+              Ideal for new brands, solo founders, early-stage startups
+              validating fast
+            </p>
+            <div class="price" data-price-ngn="₦400,000" data-price-int="$2,000"></div>
+            <button class="btn outline">Book A Call</button>
+
+            <ul class="features">
+              <li>
+                <img
+                  src="/assets/images/Check circle.png"
+                  alt="check icon"
+                />Landing page or funnel (5-7 sections)
+              </li>
+              <li>
+                <img
+                  src="/assets/images/Check circle.png"
+                  alt="check icon"
+                />Conversion-optimized copy
+              </li>
+              <li>
+                <img
+                  src="/assets/images/Check circle.png"
+                  alt="check icon"
+                />Mobile-first responsive design
+              </li>
+            </ul>
+          </div>
+
+          <div class="card popular pricing-card">
+            <div
+              style="
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+              "
+            >
+              <div class="card-icon pricing-icon">
+                <img src="/assets/images/mvp_package.png" alt="package icon" />
+              </div>
+              <div class="badge popular-badge">Most popular</div>
+            </div>
+
+            <h2>MVP PACKAGE</h2>
+            <p class="text-light">
+              Ideal for funded startups, ambitious founders, or companies
+              launching new products
+            </p>
+            <div class="price" data-price-ngn="₦3,000,000" data-price-int="$8,000"></div>
+            <button
+              class="btn primary"
+              style="background-color: #0377e8; color: #ffffff"
+            >
+              Book A Call
+            </button>
+
+            <ul class="features">
+              <li>
+                <img src="/assets/images/Check circle.png" alt="check icon" />
+                Full product development
+              </li>
+              <li>
+                <img
+                  src="/assets/images/Check circle.png"
+                  alt="check icon"
+                />Custom SaaS, web app, or e-commerce platform
+              </li>
+              <li>
+                <img
+                  src="/assets/images/Check circle.png"
+                  alt="check icon"
+                />Go-to-market funnel
+              </li>
+              <li>
+                <img
+                  src="/assets/images/Check circle.png"
+                  alt="check icon"
+                />Scalable technical architecture
+              </li>
+              <li>
+                <img
+                  src="/assets/images/Check circle.png"
+                  alt="check icon"
+                />Dedicated project lead + cross-functional team
+              </li>
+            </ul>
+          </div>
+
+          <div class="card pricing-card">
+            <div class="card-icon pricing-icon">
+              <img src="/assets/images/growth_package.png" alt="package icon" />
+            </div>
+            <h2>GROWTH RETAINER</h2>
+            <p class="text-light">
+              Ideal for brands needing ongoing optimization
+            </p>
+            <div class="price retainer" data-price-ngn="₦1,000,000" data-price-int="$6,000">
+          
+            </div>
+            <button class="btn outline">Book A Call</button>
+
+            <ul class="features">
+              <li>
+                <img
+                  src="/assets/images/Check circle.png"
+                  alt="check icon"
+                />Monthly funnel audits + A/B testing
+              </li>
+              <li>
+                <img
+                  src="/assets/images/Check circle.png"
+                  alt="check icon"
+                />Conversion rate optimization
+              </li>
+              <li>
+                <img
+                  src="/assets/images/Check circle.png"
+                  alt="check icon"
+                />Growth experiments
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="end-text">
+          <p>
+            Click <a href="">here</a> to view the full list of features,
+            benefits, and everything included in each package
+          </p>
+        </div>
+      </section>
+
+      <section class="testimonials-section">
+        <div class="process-heading">
+          <h1>Success Stories</h1>
+          <p class="subtitle">
+            Honest feedback from the people whose lives and businesses we’ve
+            helped improve.
+          </p>
+        </div>
+
+        <div class="testimonial-wrapper">
+          <button class="nav-btn prev">
+            <span>&lt;</span>
+          </button>
+
+          <div class="testimonial-cards" id="testimonialCards">
+            <!-- Card 1 -->
+            <div class="testimonial-card active">
+              <div class="card-content">
+                <div class="quote-mark">"</div>
+                <p class="message">
+                  Forjar Labs didn’t just build our product, they understood our
+                  vision. Every step of the way, they turned ideas into
+                  something tangible, intuitive, and scalable. Their team is
+                  patient, smart, and truly cares about the outcome.
+                </p>
+
+                <div class="author-block">
+                  <div class="line"></div>
+                  <h4>BRUME ENAOHWO</h4>
+                  <span>Kprints</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Card 2 -->
+            <div class="testimonial-card">
+              <div class="card-content">
+                <div class="quote-mark">"</div>
+                <p class="message">
+                  Working with Forjar Labs was one of the best decisions I made.
+                  They delivered exceptional quality, fast communication, and
+                  creative problem-solving at every step.
+                </p>
+
+                <div class="author-block">
+                  <div class="line"></div>
+                  <h4>SOPHIA MARTINS</h4>
+                  <span>BrandFlow</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Card 3 -->
+            <div class="testimonial-card">
+              <div class="card-content">
+                <div class="quote-mark">"</div>
+                <p class="message">
+                  The team is brilliant. They think ahead, execute quickly, and
+                  understand product deeply. We scaled faster thanks to their
+                  work.
+                </p>
+
+                <div class="author-block">
+                  <div class="line"></div>
+                  <h4>TIJANI DAUDA</h4>
+                  <span>ProLaunch</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <button class="nav-btn next">
+            <span>&gt;</span>
+          </button>
+        </div>
+      </section>
+
+      <section class="faq-section">
+        <h1>Got Questions? We’ve Got Answers.</h1>
+        <p class="faq-subtitle">
+          Everything you need to know about working with us, building with us,
+          or joining our team — clear, direct, no fluff.
+        </p>
+
+        <div class="faq-wrapper">
+          <!-- LEFT ACCORDION -->
+          <div class="faq-list">
+            <div class="faq-item open">
+              <div class="faq-question">
+                <span>Why should I hire you instead of building in-house?</span>
+                <button class="toggle">−</button>
+              </div>
+              <div class="faq-answer">
+                Building in-house costs $390K+/year for a team (PM, designer, 2
+                engineers). We deliver the same output in 6–12 weeks for
+                $8K–$45K. You get speed, expertise, and proven systems without
+                the overhead.
+              </div>
+            </div>
+
+            <div class="faq-item">
+              <div class="faq-question">
+                <span>What if my priorities change mid-project?</span>
+                <button class="toggle">+</button>
+              </div>
+              <div class="faq-answer">
+                We adjust scope and timelines using our agile delivery system.
+              </div>
+            </div>
+
+            <div class="faq-item">
+              <div class="faq-question">
+                <span
+                  >Can you work alongside my internal team or other
+                  contractors?</span
+                >
+                <button class="toggle">+</button>
+              </div>
+              <div class="faq-answer">
+                Yes — we integrate seamlessly into existing workflows.
+              </div>
+            </div>
+
+            <div class="faq-item">
+              <div class="faq-question">
+                <span
+                  >What if I need to pause or scale down after my project
+                  launches?</span
+                >
+                <button class="toggle">+</button>
+              </div>
+              <div class="faq-answer">
+                We offer flexible arrangements with no long-term commitments.
+              </div>
+            </div>
+
+            <div class="faq-item">
+              <div class="faq-question">
+                <span>Do you offer both retainers and one-off projects?</span>
+                <button class="toggle">+</button>
+              </div>
+              <div class="faq-answer">
+                Yes — pick what fits your needs best.
+              </div>
+            </div>
+
+            <div class="faq-item">
+              <div class="faq-question">
+                <span
+                  >What if my workload spikes temporarily? Can you scale
+                  fast?</span
+                >
+                <button class="toggle">+</button>
+              </div>
+              <div class="faq-answer">
+                Our team can scale output rapidly on demand.
+              </div>
+            </div>
+
+            <div class="faq-item">
+              <div class="faq-question">
+                <span>Can you handle multiple types of work?</span>
+                <button class="toggle">+</button>
+              </div>
+              <div class="faq-answer">
+                Yes — product, design, engineering, growth, and more.
+              </div>
+            </div>
+          </div>
+
+          <!-- RIGHT WHATSAPP CARD -->
+          <div class="faq-contact-card">
+            <img
+              src="/assets/images/goodness.png"
+              class="avatar"
+              alt="avatar"
+            />
+
+            <h3>Can’t find your question?</h3>
+            <p class="small">Reach Us on Whatsapp</p>
+
+            <button class="whatsapp-btn">Message Us</button>
+          </div>
+        </div>
+      </section>
+    </main>
+    <!-- Top Section -->
+    <section class="top-section">
+      <h1>Let’s Build Something<br />That Matters.</h1>
       <p>
-        We collaborate with founders, agencies, and startups to bring clarity to
-        complex projects. UX, engineering, growth, our services aren't
-        surface-level. They're infrastructure.
+        Whether you're growing a business, launching a project, or looking to
+        join our team, we make it happen — fast, smart, and without the noise.
       </p>
-
-      <button><a href="https://services.forjarlabs.agency/">Visit Our Services Portal</a></button>
-
-      <div class="services-list-row">
-        <div class="service-category-column">
-          <h5 class="service-category-header">STRATEGY & DESIGN</h5>
-          <ul>
-            <li>Product Strategy</li>
-            <li>UX Research</li>
-            <li>Wireframing & Prototyping</li>
-            <li>UI/UX Design</li>
-          </ul>
-        </div>
-        <div class="service-category-column">
-          <h5 class="service-category-header">WEB & APP DEV</h5>
-          <ul>
-            <li>Full-Stack Builds</li>
-            <li>Mobile Apps</li>
-            <li>PWAs</li>
-            <li>Dashboards</li>
-          </ul>
-        </div>
-        <div class="service-category-column">
-          <h5 class="service-category-header">BRAND SYSTEMS</h5>
-          <ul>
-            <li>Brand Strategy</li>
-            <li>Logo Design</li>
-            <li>Identity Systems</li>
-            <li>Guidelines</li>
-          </ul>
-        </div>
-        <div class="service-category-column">
-          <h5 class="service-category-header">GROWTH & OPS</h5>
-          <ul>
-            <li>Landing Page & Funnels</li>
-            <li>Analytics</li>
-            <li>CRO</li>
-            <li>CRM Setup</li>
-          </ul>
-        </div>
-        <div class="service-category-column">
-          <h5 class="service-category-header">TELEGRAM BUILDS</h5>
-          <ul>
-            <li>Mini Apps</li>
-            <li>Payments</li>
-            <li>Chatbots</li>
-            <li>Notifications</li>
-          </ul>
-        </div>
-      </div>
+      <button class="cta-btn">Work With Us</button>
     </section>
 
-    <section id="about">
-      <div class="about-left">
-        <h4 class="section-heading">OUR STORY</h4>
-        <h1>Small Studio. Global Thinking. Long-Term Mindset.</h1>
-        <p>
-          We’re intentionally lean, a team of senior designers, engineers, and
-          operators with 15+ years of combined experience across product and
-          business. We work quietly, deliver consistently, and measure success
-          by what lasts.
-        </p>
-        <button><a href="/about/">Read Our Story</a></button>
-      </div>
-      <div class="about-right">
-        <img src="/assets/images/about.png" alt="About Image" />
-      </div>
-    </section>
+    <!-- Footer -->
+    <footer>
+      <div class="footer-grid">
+        <div class="footer-logo">
+          <img src="/assets/images/Logo.png" alt="Logo" />
+          <span>Forjar Labs</span>
+        </div>
 
-    <section id="contact">
-      <div class="contact-left">
-        <img src="/assets/images/contact.png" alt="Contact Image" />
-      </div>
-      <div class="contact-right">
-        <h4>CONTACT US</h4>
-        <h1>Let’s Talk When It Matters.</h1>
-        <p>
-          Whether you’re starting from a pitch deck, a messy Figma file, or just
-          an idea that won’t leave you alone, we’re open to real conversations
-          with people building real things.
-        </p>
+        <div class="footer-col">
+          <a href="#">Home</a>
+          <a href="#">About us</a>
+          <a href="#">Services</a>
+          <a href="#">Products</a>
+          <a href="#">Testimonials</a>
+        </div>
 
-       <form id="contact-form">
-  <div class="form-row">
-    <label for="first-name">(Name)</label>
-    <input
-      type="text"
-      name="first-name"
-      id="first-name"
-      placeholder="First Name"
-      required
-    />
-    <label for="email">(Email)</label>
-    <input
-      type="email"
-      name="email"
-      id="email"
-      placeholder="Email Address"
-      required
-    />
-  </div>
-  <textarea name="message" id="message" required></textarea>
-  <button type="submit" class="contact-button">Send Message</button>
-</form>
-      </div>
-    </section>
+        <div class="footer-col">
+          <a href="#">LinkedIn</a>
+          <a href="#">Twitter</a>
+          <a href="#">Dribbble</a>
+        </div>
 
-    <div id="footer-placeholder"></div>
+        <div class="footer-col">
+          <a href="#">Terms and Conditions</a>
+          <a href="#">FAQs</a>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div class="links">
+          <a href="#">Terms of Use</a>
+          <a href="#">Privacy Policy</a>
+          <a href="#">Sitemap</a>
+        </div>
+        <p>Copyright © 2025 ForjarLabs. All rights reserved.</p>
+      </div>
+    </footer>
 
     <script src="/assets/js/main.js"></script>
-    <script></script>
   </body>
 </html>

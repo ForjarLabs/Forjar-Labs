@@ -44,7 +44,7 @@ html {
 body {
   background-color: var(--color-body-bg);
   color: var(--color-text);
-  font-family: var(--font-base);
+  font-family:  "Urbanist", sans-serif;;
   /* font-size: var(--font-size-base); */
   line-height: 1.6;
   -webkit-font-smoothing: antialiased;
